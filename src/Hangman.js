@@ -50,7 +50,7 @@ Letters.push(Letters[0]); //Ignore the card at 0th position.
 
 for (let f = 1; f <= 16; f++) {
     document.getElementById("button" + f).innerHTML = Letters[f];
-    document.getElementById("button" + f).style="cursor: pointer";
+    document.getElementById("button" + f).style="cursor: pointer;border-radius: 8px;";
     //Dispay the letters into the indivisual buttons.
 }
 
