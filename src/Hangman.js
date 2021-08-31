@@ -50,6 +50,7 @@ Letters.push(Letters[0]); //Ignore the card at 0th position.
 
 for (let f = 1; f <= 16; f++) {
     document.getElementById("button" + f).innerHTML = Letters[f];
+    document.getElementById("button" + f).style="cursor: pointer";
     //Dispay the letters into the indivisual buttons.
 }
 
@@ -73,11 +74,11 @@ function checkscore(a) {
             }
         }
 
-        document.getElementById("button" + a).style = "background-color:lime";
+        document.getElementById("button" + a).style = "background-color:lime;color:Blue;";
         //Set the background to green for sucessfull match.
         document.getElementById("Word").innerHTML = WordLetters.join(" ");
     } else {
-        document.getElementById("button" + a).style = "background-color:Orange";
+        document.getElementById("button" + a).style = "background-color:Tomato;color:White;";
         //Set the background to red for unsucessfull match.
         TurnsLeft = TurnsLeft - 1;
         //reduce the number of tunrns left.
