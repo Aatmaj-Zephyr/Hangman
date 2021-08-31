@@ -90,6 +90,9 @@ function checkscore(a) {
         //Game lost if turns over.
         GameOver(); //game over.
     }
+    if(TurnsLeft<=2){
+         document.getElementById("TurnsLeft").style = "color:Red";
+    }
 
 }
 
