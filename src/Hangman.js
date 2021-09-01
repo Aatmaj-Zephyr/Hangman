@@ -48,7 +48,7 @@ while (Letters.length < 16) {
 Letters.sort(() => 0.5 - Math.random()); //Random shuffling of Letters.
 Letters.push(Letters[0]); //Ignore the card at 0th position.
 
-var style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);cursor: pointer;border-radius: 8px;";
+var style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
 for (let f = 1; f <= 16; f++) {
     document.getElementById("button" + f).innerHTML = Letters[f];
     document.getElementById("button" + f).style=style;
@@ -75,11 +75,11 @@ function checkscore(a) {
             }
         }
 
-        document.getElementById("button" + a).style = "transition-duration: 0.8s;background-color:lime;color:Blue;";
+        document.getElementById("button" + a).style = "transition-duration: 0.8s;background-color:lime;color:Blue;cursor: not-allowed";
         //Set the background to green for sucessfull match.
         document.getElementById("Word").innerHTML = WordLetters.join(" ");
     } else {
-        document.getElementById("button" + a).style = "transition-duration: 0.8s;background-color:Tomato;color:White;";
+        document.getElementById("button" + a).style = "transition-duration: 0.8s;background-color:Tomato;color:White;cursor: not-allowed";
         //Set the background to red for unsucessfull match.
         TurnsLeft = TurnsLeft - 1;
         //reduce the number of tunrns left.
