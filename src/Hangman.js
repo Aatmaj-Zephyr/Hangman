@@ -1,10 +1,9 @@
 //PascalCase followed.
-const ArrayOfWords=data; //array of data
+const ArrayOfWords = data; //array of data
 //Array containing the words.
 //document.getElementById("Word").innerHTML=ArrayOfWords[2];
 const Word = ArrayOfWords[Math.floor(Math.random() * (ArrayOfWords.length))];
 //One random word from the Array.
-
 const WordLength = Word.length;
 //Length of the word.
 
@@ -25,7 +24,10 @@ document.getElementById("Word").innerHTML = WordLetters.join(" ");
 let TurnsLeft = Math.floor(WordLength * 0.8);
 //Number of turns left. Modify the formula in the later versions.
 
-document.getElementById("TurnsLeft").innerHTML = "Turns left= " + TurnsLeft;
+var TurnsleftStyle = "font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
+document.getElementById("TurnsLeft").innerHTML = TurnsLeft;
+SetTurnsLeftStyle();
+
 //Display the number of turns left
 
 const Letters = []; //Array to store the Letters
@@ -41,17 +43,17 @@ while (Letters.length < 16) {
     r = Math.floor(Math.random() * (122 - 97 + 1)) + 97; //Character set from unicode.
     v = String.fromCharCode(r);
     if (!(Letters.includes(v))) {
-        Letters.push(v); 
+        Letters.push(v);
         //Push random characters into the "Letters" array without repetition.
     }
 }
 Letters.sort(() => 0.5 - Math.random()); //Random shuffling of Letters.
 Letters.push(Letters[0]); //Ignore the card at 0th position.
 
-var style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
+var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
 for (let f = 1; f <= 16; f++) {
     document.getElementById("button" + f).innerHTML = Letters[f];
-    document.getElementById("button" + f).style=style;
+    document.getElementById("button" + f).style = style;
     //Dispay the letters into the indivisual buttons.
 }
 
@@ -84,7 +86,7 @@ function checkscore(a) {
         TurnsLeft = TurnsLeft - 1;
         //reduce the number of tunrns left.
     }
-    document.getElementById("TurnsLeft").innerHTML = "Turns left= " + TurnsLeft;
+    document.getElementById("TurnsLeft").innerHTML = TurnsLeft;
     if (WordLetters.join("") == Word) {
         GameWon(); //Game won if all letters correctly guessed.
     }
@@ -92,10 +94,20 @@ function checkscore(a) {
         //Game lost if turns over.
         GameOver(); //game over.
     }
-    if(TurnsLeft<=2){
-         document.getElementById("TurnsLeft").style = "color:Red";
-    }
 
+    SetTurnsLeftStyle();
+
+}
+
+function SetTurnsLeftStyle() {
+    //Set the colour of the turns left according to the theme
+    if (TurnsLeft <= 4 && TurnsLeft > 2) {
+        document.getElementById("TurnsLeft").style = TurnsleftStyle + "color:green; border: 4px solid #008CBA; background-color:Yellow";
+    } else if (TurnsLeft <= 2) {
+        document.getElementById("TurnsLeft").style = TurnsleftStyle + "color:white; border: 4px solid #4CAF50; background-color:Red";
+    } else {
+        document.getElementById("TurnsLeft").style = TurnsleftStyle + "color:voilet;background-color:lime; border: 3px solid #f44336;";
+    }
 }
 
 function GameOver() {
@@ -104,13 +116,13 @@ function GameOver() {
         //Alert that the game is over after a delay
     }, 1000);
     document.getElementById("Word").innerHTML = Word;
-    document.getElementById("Word").style = "color:Red";
+    document.getElementById("Word").style = "color:Red;font-size:80px";
     //Show message first, then letter
 }
 
 function GameWon() {
     document.getElementById("Word").innerHTML = Word;
-    document.getElementById("Word").style = "color:lime";
+    document.getElementById("Word").style = "color:lime;font-size:80px";
     //Show word first, then message with delay
     window.setTimeout(function() {
 
