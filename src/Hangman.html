@@ -2,8 +2,11 @@
    <head>
       <style>
          .h1{
-             font-family: "Brush Script MT", cursive;
-             color: red;
+         font-family: "Brush Script MT", cursive;
+         color: red;
+         }
+         .button:hover{ background-color: yellow;
+         color: black;
          }
          .keys {
          display: grid;
@@ -16,26 +19,25 @@
    <body>
       <h1 class="h1">Welcome to Pokemon Hangman! </h1>
       <h2 id="Word"></h2>
-      
       <div class="keys">
-         <button id="button1"  onClick="ButtonClicked(1) "> ? </button>
-         <button id="button2"  onClick="ButtonClicked(2) "> ? </button>
-         <button id="button3"  onClick="ButtonClicked(3) "> ? </button>
-         <button id="button4"  onClick="ButtonClicked(4) "> ? </button>
-         <button id="button5"  onClick="ButtonClicked(5) "> ? </button>
-         <button id="button6"  onClick="ButtonClicked(6) "> ? </button>
-         <button id="button7"  onClick="ButtonClicked(7) "> ? </button>
-         <button id="button8"  onClick="ButtonClicked(8) "> ? </button>
-         <button id="button9"  onClick="ButtonClicked(9) "> ? </button>
-         <button id="button10" onClick="ButtonClicked(10)"> ? </button>
-         <button id="button11" onClick="ButtonClicked(11)"> ? </button>
-         <button id="button12" onClick="ButtonClicked(12)"> ? </button>
-         <button id="button13" onClick="ButtonClicked(13)"> ? </button>
-         <button id="button14" onClick="ButtonClicked(14)"> ? </button>
-         <button id="button15" onClick="ButtonClicked(15)"> ? </button>
-         <button id="button16" onClick="ButtonClicked(16)"> ? </button>
+         <button id="button1"  class="button" onClick="ButtonClicked(1) "> ? </button>
+         <button id="button2"  class="button" onClick="ButtonClicked(2) "> ? </button>
+         <button id="button3"  class="button" onClick="ButtonClicked(3) "> ? </button>
+         <button id="button4"  class="button" onClick="ButtonClicked(4) "> ? </button>
+         <button id="button5"  class="button" onClick="ButtonClicked(5) "> ? </button>
+         <button id="button6"  class="button" onClick="ButtonClicked(6) "> ? </button>
+         <button id="button7"  class="button" onClick="ButtonClicked(7) "> ? </button>
+         <button id="button8"  class="button" onClick="ButtonClicked(8) "> ? </button>
+         <button id="button9"  class="button" onClick="ButtonClicked(9) "> ? </button>
+         <button id="button10" class="button" onClick="ButtonClicked(10)"> ? </button>
+         <button id="button11" class="button" onClick="ButtonClicked(11)"> ? </button>
+         <button id="button12" class="button" onClick="ButtonClicked(12)"> ? </button>
+         <button id="button13" class="button" onClick="ButtonClicked(13)"> ? </button>
+         <button id="button14" class="button" onClick="ButtonClicked(14)"> ? </button>
+         <button id="button15" class="button" onClick="ButtonClicked(15)"> ? </button>
+         <button id="button16" class="button" onClick="ButtonClicked(16)"> ? </button>
       </div>
-      <p id="TurnsLeft">   Turns left </p>
+      <p id="TurnsLeft"> </p>
       <script type="text/javascript" src=names.js></script>
       <script type="text/javascript" src=Hangman.js></script>
    </body>
