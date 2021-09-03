@@ -1,7 +1,7 @@
 //Style constants
 var TurnsleftStyle = "font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
 var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); font-size: 20px;transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
-const bulbalink="https://archives.bulbagarden.net/wiki/File:"
+const SpriteLink="https://img.pokemondb.net/artwork/large/";
 var ArrayOfWords = data; //array of data
 //Array containing the words.
 var Word,WordLength,WordLetters,TurnsLeft,Letters,id;
@@ -9,6 +9,7 @@ var Word,WordLength,WordLetters,TurnsLeft,Letters,id;
 start();
 function start(){
      document.getElementById("image").style="display:none;width:5%";
+      document.getElementById("body").style="text-align:center;background-color: rgba(255,182,193,0.5);";
   //PascalCase followed.
  id=Math.floor(Math.random() * (ArrayOfWords.length));
  Word = ArrayOfWords[id];
@@ -157,9 +158,9 @@ function imshow(){
     //Dispay the letters into the indivisual buttons.
 }
     //show the image
-  // document.getElementById("image").src=bulbalink+id+WordLetters.join("")+".png"
-    document.getElementById("image").style="width:5%";
-    document.getElementById("image").style="transition-duration:3.0s;width:50%";
+    document.getElementById("body").style="text-align:center;background-color: white;transition-duration:3.0s;"
+   document.getElementById("image").src=SpriteLink+Word.toLowerCase()+".jpg"
+    document.getElementById("image").style="width:40%";
 
     
 }
