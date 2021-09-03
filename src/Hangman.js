@@ -167,8 +167,8 @@ function imshow(){
 }
     //show the image
     document.getElementById("body").style="text-align:center;background-color: white;transition-duration:2.0s;";
-  
-    document.getElementById("image").style="width:30%;transition-duration:2.0s;";
+   document.getElementById("image").style="width:30%;animation: appear 1.5s 1";
+
 
     
 }
