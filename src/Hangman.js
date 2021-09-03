@@ -1,4 +1,5 @@
 //Style constants
+var score=0;
 var TurnsleftStyle = "font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
 var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); font-size: 20px;transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
 const SpriteLink="https://img.pokemondb.net/artwork/large/";
@@ -126,9 +127,11 @@ function GameOver() {
 
     window.setTimeout(function() {
         //Alert that the game is over after a delay
-        let TryAgain = confirm(" Game Over, you lost Try again?");
-
+        
+    score=score+TurnsLeft;
+    let TryAgain = confirm(" Game Over, you lost. Total score is "+score+"points \n Do you want to try again?");
     if(TryAgain==true){
+        score=0;
         start();
     }
     }, 2000);
@@ -144,9 +147,10 @@ function GameWon() {
     document.getElementById("Word").style = "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:150px";
     //Show word first, then message with delay
     window.setTimeout(function() {
-
-        alert("Game Over, you Won!");
+score=score+TurnsLeft;
+        alert("Round passed! Current score is "+score);
         //Alert that the game is over after a delay
+        start();
     }, 2000);
    imshow();
 }
