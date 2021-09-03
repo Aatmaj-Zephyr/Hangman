@@ -1,6 +1,6 @@
 //Style constants
 var TurnsleftStyle = "font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
-var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
+var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); font-size: 20px;transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
 
 var ArrayOfWords = data; //array of data
 //Array containing the words.
@@ -8,6 +8,7 @@ var Word,WordLength,WordLetters,TurnsLeft,Letters,id;
 
 start();
 function start(){
+     document.getElementById("image").style.display="none";
   //PascalCase followed.
  id=Math.floor(Math.random() * (ArrayOfWords.length));
  Word = ArrayOfWords[id];
@@ -32,6 +33,7 @@ document.getElementById("Word").innerHTML = WordLetters.join(" ");
  TurnsLeft = Math.floor(WordLength * 0.8);
 //Number of turns left. Modify the formula in the later versions.
 document.getElementById("TurnsLeft").innerHTML = TurnsLeft;
+ document.getElementById("TurnsLeft").style.display="";
 SetTurnsLeftStyle();
 //Display the number of turns left
  Letters = []; //Array to store the Letters
@@ -58,7 +60,7 @@ for (var f = 1; f <= 16; f++) {
     document.getElementById("button" + f).style = style;
     document.getElementById("button" + f).disabled="";
     document.getElementById("button" + f).display="";
-    //Dispay the letters into the indivisual buttons.
+    //Dispay the letters into the individual buttons.
 }
 }
 
@@ -113,14 +115,13 @@ function SetTurnsLeftStyle() {
     } else {
         document.getElementById("TurnsLeft").style = TurnsleftStyle + "color:voilet;background-color:lime; border: 3px solid #f44336;";
     }
+    if(TurnsLeft==0){
+          document.getElementById("TurnsLeft").style.display="none";
+    }
 }
 
 function GameOver() {
-    for (var counter_gameover = 1; counter_gameover <= 16; counter_gameover++) {
-    document.getElementById("button" + counter_gameover).style.visibility="hidden";
 
-    //Dispay the letters into the indivisual buttons.
-}
     window.setTimeout(function() {
         //Alert that the game is over after a delay
         let TryAgain = confirm(" Game Over, you lost Try again?");
@@ -132,16 +133,11 @@ function GameOver() {
     document.getElementById("Word").innerHTML = Word;
     document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px";
     //Show message first, then letter
-    
+    imshow();
 }
 
 function GameWon() {
-    for (var counter_gamewon = 1; counter_gamewon <= 16; counter_gamewon++) {
-    document.getElementById("button" + counter_gamewon).style.visibility="hidden";
-
-    //Dispay the letters into the indivisual buttons.
-}
-    document.getElementById("Word").innerHTML = Word;
+  document.getElementById("Word").innerHTML = Word;
     document.getElementById("Word").style = "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:150px";
     //Show word first, then message with delay
     window.setTimeout(function() {
@@ -149,5 +145,18 @@ function GameWon() {
         alert("Game Over, you Won!");
         //Alert that the game is over after a delay
     }, 2000);
+   imshow();
+}
+function imshow(){
+        for (var counter_gameover = 1; counter_gameover <= 16; counter_gameover++) {
+    document.getElementById("button" + counter_gameover).style.display="none";
+
+    //Dispay the letters into the indivisual buttons.
+}
+    //show the image
    
+    document.getElementById("image").style.display="";
+    document.getElementById("image").height="600";
+    document.getElementById("image").width="600";
+    
 }
