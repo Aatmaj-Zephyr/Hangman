@@ -1,6 +1,32 @@
 <html>
    <head>
       <style>
+      /* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: yellow;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
          .h1{
          font-family: "Brush Script MT", cursive;
          color: red;
@@ -23,7 +49,7 @@
 }
       </style>
    </head>
-   <body>
+   <body style="text-align:center;">
       <p align="center" style="animation-name:coloranimation; animation-duration: 4s;animation-iteration-count: infinite;" class="h1">Welcome to Pokemon Hangman! </p>
       <p align="center"><font color="blue" size="40px" id="Word"></font></p>
       <div class="keys">
@@ -44,9 +70,14 @@
          <button id="button15" class="button" onClick="ButtonClicked(15)"> ? </button>
          <button id="button16" class="button" onClick="ButtonClicked(16)"> ? </button>
       </div>
-      <p align="center">
-         <button  id="TurnsLeft" > </button>
-      </p>
+      
+     
+<div class="tooltip">
+         <button class="tooltip" id="TurnsLeft" > </button>
+              <span class="tooltiptext">Turns left</span>
+              </div>
+
+
       <script type="text/javascript" src=names.js></script>
       <script type="text/javascript" src=Hangman.js></script>
    </body>
