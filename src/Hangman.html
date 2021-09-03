@@ -14,10 +14,17 @@
          grid-gap: 20px;
          padding: 20px;
          }
+         
+@keyframes coloranimation {
+  0%   {color: red;}
+  25%  {color: orange;}
+  50%  {color: blue;}
+  100% {color: green;}
+}
       </style>
    </head>
    <body>
-      <p align="center" class="h1">Welcome to Pokemon Hangman! </p>
+      <p align="center" style="animation-name:coloranimation; animation-duration: 4s;animation-iteration-count: infinite;" class="h1">Welcome to Pokemon Hangman! </p>
       <p align="center"><font color="blue" size="40px" id="Word"></font></p>
       <div class="keys">
          <button id="button1"  class="button" onClick="ButtonClicked(1) "> ? </button>
