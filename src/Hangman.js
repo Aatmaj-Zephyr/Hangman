@@ -1,14 +1,14 @@
 //Style constants
 var TurnsleftStyle = "font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
 var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); font-size: 20px;transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
-
+const bulbalink="https://archives.bulbagarden.net/wiki/File:"
 var ArrayOfWords = data; //array of data
 //Array containing the words.
 var Word,WordLength,WordLetters,TurnsLeft,Letters,id;
 
 start();
 function start(){
-     document.getElementById("image").style.display="none";
+     document.getElementById("image").style="display:none;width:5%";
   //PascalCase followed.
  id=Math.floor(Math.random() * (ArrayOfWords.length));
  Word = ArrayOfWords[id];
@@ -94,6 +94,8 @@ function checkscore(a) {
         //reduce the number of tunrns left.
     }
     document.getElementById("TurnsLeft").innerHTML = TurnsLeft;
+    
+    SetTurnsLeftStyle();//this must be before game over or game won.
     if (WordLetters.join("") == Word) {
         GameWon(); //Game won if all letters correctly guessed.
     }
@@ -102,7 +104,6 @@ function checkscore(a) {
         GameOver(); //game over.
     }
 
-    SetTurnsLeftStyle();
 
 }
 
@@ -137,6 +138,7 @@ function GameOver() {
 }
 
 function GameWon() {
+    
   document.getElementById("Word").innerHTML = Word;
     document.getElementById("Word").style = "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:150px";
     //Show word first, then message with delay
@@ -148,15 +150,16 @@ function GameWon() {
    imshow();
 }
 function imshow(){
+    document.getElementById("TurnsLeft").style.display="none";
         for (var counter_gameover = 1; counter_gameover <= 16; counter_gameover++) {
     document.getElementById("button" + counter_gameover).style.display="none";
 
     //Dispay the letters into the indivisual buttons.
 }
     //show the image
-   
-    document.getElementById("image").style.display="";
-    document.getElementById("image").height="600";
-    document.getElementById("image").width="600";
+  // document.getElementById("image").src=bulbalink+id+WordLetters.join("")+".png"
+    document.getElementById("image").style="width:5%";
+    document.getElementById("image").style="transition-duration:3.0s;width:50%";
+
     
 }
