@@ -116,13 +116,13 @@ function GameOver() {
         //Alert that the game is over after a delay
     }, 1000);
     document.getElementById("Word").innerHTML = Word;
-    document.getElementById("Word").style = "color:Red;font-size:80px";
+    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;font-size:80px";
     //Show message first, then letter
 }
 
 function GameWon() {
     document.getElementById("Word").innerHTML = Word;
-    document.getElementById("Word").style = "color:lime;font-size:80px";
+    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:lime;font-size:80px";
     //Show word first, then message with delay
     window.setTimeout(function() {
 
