@@ -9,7 +9,7 @@ var Word,WordLength,WordLetters,TurnsLeft,Letters,id;
 
 start();
 function start(){
-     document.getElementById("image").style="display:none;width:5%";
+     
       document.getElementById("body").style="text-align:center;background-color: rgba(255,182,193,0.5);";
   //PascalCase followed.
  id=Math.floor(Math.random() * (ArrayOfWords.length));
@@ -64,6 +64,8 @@ for (var f = 1; f <= 16; f++) {
     document.getElementById("button" + f).display="";
     //Dispay the letters into the individual buttons.
 }
+document.getElementById("image").style="display:none;width:5%";
+      document.getElementById("image").src=SpriteLink+Word.toLowerCase()+".jpg"//to load image beforehand;
 }
 
 function ButtonClicked(a) {
@@ -129,12 +131,12 @@ function GameOver() {
         //Alert that the game is over after a delay
         
     score=score+TurnsLeft;
-    let TryAgain = confirm(" Game Over, you lost. Total score is "+score+"points \n Do you want to try again?");
+    let TryAgain = confirm(" Game Over, you lost. Total score is "+score+" points \n Do you want to try again?");
     if(TryAgain==true){
         score=0;
         start();
     }
-    }, 2000);
+    }, 2500);
     document.getElementById("Word").innerHTML = Word;
     document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px";
     //Show message first, then letter
@@ -151,7 +153,7 @@ score=score+TurnsLeft;
         alert("Round passed! Current score is "+score);
         //Alert that the game is over after a delay
         start();
-    }, 2000);
+    }, 2500);
    imshow();
 }
 function imshow(){
@@ -162,9 +164,9 @@ function imshow(){
     //Dispay the letters into the indivisual buttons.
 }
     //show the image
-    document.getElementById("body").style="text-align:center;background-color: white;transition-duration:3.0s;"
-   document.getElementById("image").src=SpriteLink+Word.toLowerCase()+".jpg"
-    document.getElementById("image").style="width:40%";
+    document.getElementById("body").style="text-align:center;background-color: white;transition-duration:2.0s;";
+  
+    document.getElementById("image").style="width:30%";
 
     
 }
