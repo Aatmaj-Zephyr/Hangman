@@ -24,7 +24,7 @@ for (let i = WordLength - 1; i > 0; i--) {
     //Push blank underscores in the rest of the array according to the length of the word.
 }
 
-document.getElementById("Word").style = "color:blue";
+document.getElementById("Word").style = "color:blue;transition-duration: 0.8s;";
 document.getElementById("Word").innerHTML = WordLetters.join(" ");
 //Display the word in the HTML file
 
@@ -56,6 +56,7 @@ for (var f = 1; f <= 16; f++) {
     document.getElementById("button" + f).innerHTML = Letters[f];
     document.getElementById("button" + f).style = style;
     document.getElementById("button" + f).disabled="";
+    document.getElementById("button" + f).display="";
     //Dispay the letters into the indivisual buttons.
 }
 }
@@ -114,6 +115,11 @@ function SetTurnsLeftStyle() {
 }
 
 function GameOver() {
+    for (var counter_gameover = 1; counter_gameover <= 16; counter_gameover++) {
+    document.getElementById("button" + counter_gameover).style.visibility="hidden";
+
+    //Dispay the letters into the indivisual buttons.
+}
     window.setTimeout(function() {
         //Alert that the game is over after a delay
         let TryAgain = confirm(" Game Over, you lost Try again?");
@@ -121,20 +127,25 @@ function GameOver() {
     if(TryAgain==true){
         start();
     }
-    }, 1000);
+    }, 2000);
     document.getElementById("Word").innerHTML = Word;
-    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;font-size:80px";
+    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px";
     //Show message first, then letter
     
 }
 
 function GameWon() {
+    for (var counter_gamewon = 1; counter_gamewon <= 16; counter_gamewon++) {
+    document.getElementById("button" + counter_gamewon).style.visibility="hidden";
+
+    //Dispay the letters into the indivisual buttons.
+}
     document.getElementById("Word").innerHTML = Word;
-    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:lime;font-size:80px";
+    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:150px";
     //Show word first, then message with delay
     window.setTimeout(function() {
 
         alert("Game Over, you Won!");
         //Alert that the game is over after a delay
-    }, 1000);
+    }, 2000);
 }
