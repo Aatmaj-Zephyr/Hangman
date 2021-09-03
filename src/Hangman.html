@@ -12,8 +12,8 @@
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: yellow;
-  color: black;
+  background-color: aqua;
+  color: red;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
@@ -26,6 +26,8 @@
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  opacity: 0;
+  transition: opacity 1.5s;
 }
          .h1{
          font-family: "Brush Script MT", cursive;
@@ -49,7 +51,7 @@
 }
       </style>
    </head>
-   <body bgcolor="pink" style="text-align:center;">
+   <body style="text-align:center;background-color: rgba(255,182,193,0.5);">
       <p align="center" style="animation-name:coloranimation; animation-duration: 4s;animation-iteration-count: infinite;" class="h1">Welcome to Pokemon Hangman! </p>
       <p align="center"><font color="blue" size="40px" id="Word"></font></p>
       <div class="keys">
