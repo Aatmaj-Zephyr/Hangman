@@ -138,7 +138,7 @@ function GameOver() {
         score=0;
         start();
     }
-    }, 2500);
+    }, 3500);
     document.getElementById("Word").innerHTML = Word;
     document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px;";
     //Show message first, then letter
@@ -155,7 +155,7 @@ score=score+TurnsLeft;
         alert("Round passed! Current score is "+score);
         //Alert that the game is over after a delay
         start();
-    }, 2500);
+    }, 3500);
    imshow();
 }
 function imshow(){
