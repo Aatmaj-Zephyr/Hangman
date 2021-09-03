@@ -1,13 +1,19 @@
-//PascalCase followed.
-const ArrayOfWords = data; //array of data
-//Array containing the words.
-//document.getElementById("Word").innerHTML=ArrayOfWords[2];
-const Word = ArrayOfWords[Math.floor(Math.random() * (ArrayOfWords.length))];
-//One random word from the Array.
-const WordLength = Word.length;
-//Length of the word.
+//Style constants
+var TurnsleftStyle = "font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
+var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
 
-const WordLetters = [];
+var ArrayOfWords = data; //array of data
+//Array containing the words.
+var Word,WordLength,WordLetters,TurnsLeft,Letters;
+
+start();
+function start(){
+  //PascalCase followed.
+ Word = ArrayOfWords[Math.floor(Math.random() * (ArrayOfWords.length))];
+//One random word from the Array.
+ WordLength = Word.length;
+//Length of the word.  
+ WordLetters = [];
 //Array to store the letters of the Word.
 WordLetters.push(Word.charAt(0)); //Push the First letter.
 //In the current version, only the first letter is visible at a hint.
@@ -18,19 +24,16 @@ for (let i = WordLength - 1; i > 0; i--) {
     //Push blank underscores in the rest of the array according to the length of the word.
 }
 
+document.getElementById("Word").style = "color:blue";
 document.getElementById("Word").innerHTML = WordLetters.join(" ");
 //Display the word in the HTML file
 
-let TurnsLeft = Math.floor(WordLength * 0.8);
+ TurnsLeft = Math.floor(WordLength * 0.8);
 //Number of turns left. Modify the formula in the later versions.
-
-var TurnsleftStyle = "font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
 document.getElementById("TurnsLeft").innerHTML = TurnsLeft;
 SetTurnsLeftStyle();
-
 //Display the number of turns left
-
-const Letters = []; //Array to store the Letters
+ Letters = []; //Array to store the Letters
 //Setting the Letters
 
 for (var k of Word) {
@@ -49,12 +52,12 @@ while (Letters.length < 16) {
 }
 Letters.sort(() => 0.5 - Math.random()); //Random shuffling of Letters.
 Letters.push(Letters[0]); //Ignore the card at 0th position.
-
-var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
-for (let f = 1; f <= 16; f++) {
+for (var f = 1; f <= 16; f++) {
     document.getElementById("button" + f).innerHTML = Letters[f];
     document.getElementById("button" + f).style = style;
+    document.getElementById("button" + f).disabled="";
     //Dispay the letters into the indivisual buttons.
+}
 }
 
 function ButtonClicked(a) {
@@ -112,12 +115,17 @@ function SetTurnsLeftStyle() {
 
 function GameOver() {
     window.setTimeout(function() {
-        alert("Game Over, you lost");
         //Alert that the game is over after a delay
+        let TryAgain = confirm(" Game Over, you lost Try again?");
+
+    if(TryAgain==true){
+        start();
+    }
     }, 1000);
     document.getElementById("Word").innerHTML = Word;
     document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;font-size:80px";
     //Show message first, then letter
+    
 }
 
 function GameWon() {
