@@ -7,7 +7,31 @@
   display: inline-block;
 
 }
-
+@keyframes effect {
+        0% {
+            transform: translateX(0px) rotate(0deg);
+        }
+  
+        20% {
+            transform: translateX(-4px) rotate(-2deg);
+        }
+  
+        40% {
+            transform: translateX(-2px) rotate(-1deg);
+        }
+  
+        60% {
+            transform: translateX(4px) rotate(2deg);
+        }
+  
+        80% {
+            transform: translateX(2px) rotate(1deg);
+        }
+  
+        100% {
+            transform: translateX(0px) rotate(0deg);
+        }
+    }
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -28,6 +52,7 @@
   visibility: visible;
   opacity: 0;
   transition: opacity 2s;
+ 
 }
          .h1{
          font-family: "Brush Script MT", cursive;
