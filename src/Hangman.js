@@ -1,13 +1,23 @@
-//PascalCase followed.
-const ArrayOfWords = data; //array of data
+//Style constants
+var score=0;
+var TurnsleftStyle = "font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
+var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); font-size: 20px;transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
+const SpriteLink="https://img.pokemondb.net/artwork/large/";
+var ArrayOfWords = data; //array of data
 //Array containing the words.
-//document.getElementById("Word").innerHTML=ArrayOfWords[2];
-const Word = ArrayOfWords[Math.floor(Math.random() * (ArrayOfWords.length))];
-//One random word from the Array.
-const WordLength = Word.length;
-//Length of the word.
+var Word,WordLength,WordLetters,TurnsLeft,Letters,id;
 
-const WordLetters = [];
+start();
+function start(){
+     document.getElementById("image").style="display:none;width:5%";
+      document.getElementById("body").style="text-align:center;background-color: rgba(255,182,193,0.5);";
+  //PascalCase followed.
+ id=Math.floor(Math.random() * (ArrayOfWords.length));
+ Word = ArrayOfWords[id];
+//One random word from the Array.
+ WordLength = Word.length;
+//Length of the word.  
+ WordLetters = [];
 //Array to store the letters of the Word.
 WordLetters.push(Word.charAt(0)); //Push the First letter.
 //In the current version, only the first letter is visible at a hint.
@@ -18,19 +28,17 @@ for (let i = WordLength - 1; i > 0; i--) {
     //Push blank underscores in the rest of the array according to the length of the word.
 }
 
+document.getElementById("Word").style = "color:blue;transition-duration: 0.8s;";
 document.getElementById("Word").innerHTML = WordLetters.join(" ");
 //Display the word in the HTML file
 
-let TurnsLeft = Math.floor(WordLength * 0.8);
+ TurnsLeft = Math.floor(WordLength * 0.8);
 //Number of turns left. Modify the formula in the later versions.
-
-var TurnsleftStyle = "font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
 document.getElementById("TurnsLeft").innerHTML = TurnsLeft;
+ document.getElementById("TurnsLeft").style.display="";
 SetTurnsLeftStyle();
-
 //Display the number of turns left
-
-const Letters = []; //Array to store the Letters
+ Letters = []; //Array to store the Letters
 //Setting the Letters
 
 for (var k of Word) {
@@ -49,12 +57,13 @@ while (Letters.length < 16) {
 }
 Letters.sort(() => 0.5 - Math.random()); //Random shuffling of Letters.
 Letters.push(Letters[0]); //Ignore the card at 0th position.
-
-var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
-for (let f = 1; f <= 16; f++) {
+for (var f = 1; f <= 16; f++) {
     document.getElementById("button" + f).innerHTML = Letters[f];
     document.getElementById("button" + f).style = style;
-    //Dispay the letters into the indivisual buttons.
+    document.getElementById("button" + f).disabled="";
+    document.getElementById("button" + f).display="";
+    //Dispay the letters into the individual buttons.
+}
 }
 
 function ButtonClicked(a) {
@@ -87,6 +96,8 @@ function checkscore(a) {
         //reduce the number of tunrns left.
     }
     document.getElementById("TurnsLeft").innerHTML = TurnsLeft;
+    
+    SetTurnsLeftStyle();//this must be before game over or game won.
     if (WordLetters.join("") == Word) {
         GameWon(); //Game won if all letters correctly guessed.
     }
@@ -95,7 +106,6 @@ function checkscore(a) {
         GameOver(); //game over.
     }
 
-    SetTurnsLeftStyle();
 
 }
 
@@ -108,25 +118,53 @@ function SetTurnsLeftStyle() {
     } else {
         document.getElementById("TurnsLeft").style = TurnsleftStyle + "color:voilet;background-color:lime; border: 3px solid #f44336;";
     }
+    if(TurnsLeft==0){
+          document.getElementById("TurnsLeft").style.display="none";
+    }
 }
 
 function GameOver() {
+
     window.setTimeout(function() {
-        alert("Game Over, you lost");
         //Alert that the game is over after a delay
-    }, 1000);
+        
+    score=score+TurnsLeft;
+    let TryAgain = confirm(" Game Over, you lost. Total score is "+score+"points \n Do you want to try again?");
+    if(TryAgain==true){
+        score=0;
+        start();
+    }
+    }, 2000);
     document.getElementById("Word").innerHTML = Word;
-    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;font-size:80px";
+    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px";
     //Show message first, then letter
+    imshow();
 }
 
 function GameWon() {
-    document.getElementById("Word").innerHTML = Word;
-    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:lime;font-size:80px";
+    
+  document.getElementById("Word").innerHTML = Word;
+    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:150px";
     //Show word first, then message with delay
     window.setTimeout(function() {
-
-        alert("Game Over, you Won!");
+score=score+TurnsLeft;
+        alert("Round passed! Current score is "+score);
         //Alert that the game is over after a delay
-    }, 1000);
+        start();
+    }, 2000);
+   imshow();
+}
+function imshow(){
+    document.getElementById("TurnsLeft").style.display="none";
+        for (var counter_gameover = 1; counter_gameover <= 16; counter_gameover++) {
+    document.getElementById("button" + counter_gameover).style.display="none";
+
+    //Dispay the letters into the indivisual buttons.
+}
+    //show the image
+    document.getElementById("body").style="text-align:center;background-color: white;transition-duration:3.0s;"
+   document.getElementById("image").src=SpriteLink+Word.toLowerCase()+".jpg"
+    document.getElementById("image").style="width:40%";
+
+    
 }

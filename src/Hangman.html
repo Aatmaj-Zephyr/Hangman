@@ -35,7 +35,9 @@
          }
          .button:hover{ background-color: yellow;
          color: black;
+         
          }
+        
          .keys {
          display: grid;
          grid-template-columns: repeat(4, 1fr);
@@ -51,7 +53,7 @@
 }
       </style>
    </head>
-   <body style="text-align:center;background-color: rgba(255,182,193,0.5);">
+   <body id="body" style="text-align:center;background-color: rgba(255,182,193,0.5);">
       <p align="center" style="animation-name:coloranimation; animation-duration: 4s;animation-iteration-count: infinite;" class="h1">Welcome to Pokemon Hangman! </p>
       <p align="center"><font color="blue" size="40px" id="Word"></font></p>
       <div class="keys">
@@ -79,8 +81,11 @@
               <span class="tooltiptext">Turns left</span>
               </div>
 
+<img id="image" style="transition-duration: 3.0s;display:none;width5%">
 
       <script type="text/javascript" src=names.js></script>
       <script type="text/javascript" src=Hangman.js></script>
+      
+      
    </body>
 </html>
