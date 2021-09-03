@@ -4,12 +4,13 @@ var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0
 
 var ArrayOfWords = data; //array of data
 //Array containing the words.
-var Word,WordLength,WordLetters,TurnsLeft,Letters;
+var Word,WordLength,WordLetters,TurnsLeft,Letters,id;
 
 start();
 function start(){
   //PascalCase followed.
- Word = ArrayOfWords[Math.floor(Math.random() * (ArrayOfWords.length))];
+ id=Math.floor(Math.random() * (ArrayOfWords.length));
+ Word = ArrayOfWords[id];
 //One random word from the Array.
  WordLength = Word.length;
 //Length of the word.  
@@ -148,4 +149,5 @@ function GameWon() {
         alert("Game Over, you Won!");
         //Alert that the game is over after a delay
     }, 2000);
+   
 }
