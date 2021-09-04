@@ -6,7 +6,8 @@ var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0
 const SpriteLink="https://img.pokemondb.net/artwork/large/";
 const InfoHyperLink="https://bulbapedia.bulbagarden.net/wiki/";
 var music=new Audio("http://play.pokemonshowdown.com/audio/hgss-kanto-trainer.mp3");
-
+var lost=new Audio("http://commondatastorage.googleapis.com/codeskulptor-assets/Evillaugh.ogg");
+var win=new Audio("http://play.pokemonshowdown.com/audio/cries/pikachu.mp3");
 var incorrect=new Audio("http://play.pokemonshowdown.com/audio/cries/litwick.mp3");
 var correct=new Audio("http://play.pokemonshowdown.com/audio/cries/chimecho.mp3");
 var ArrayOfWords = data; //array of data
@@ -82,6 +83,10 @@ document.getElementById("image").style="display:none;width:5%";
 }
 
 function ButtonClicked(a) {
+    win.pause();
+    win.currentTime=0;
+    lost.pause();
+    lost.currentTime=0;
     correct.pause();
     correct.currentTime = 0;
     incorrect.pause();
@@ -152,7 +157,8 @@ function GameOver() {
 
     window.setTimeout(function() {
         //Alert that the game is over after a delay
-        
+        lost.play()
+        lost.volume=0.5;
     score=score+TurnsLeft;
     let TryAgain = confirm(" Game Over, you lost. Total score is "+score+" points \n Do you want to try again?");
     if(TryAgain==true){
@@ -167,7 +173,7 @@ function GameOver() {
 }
 
 function GameWon() {
-    
+    win.play();
   document.getElementById("Word").innerHTML = Word;
     document.getElementById("Word").style = "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:160px";
     //Show word first, then message with delay
@@ -187,7 +193,7 @@ function imshow(){
     //Dispay the letters into the indivisual buttons.
 }
     music.pause();
-    music.setTimeout=0;
+    music.currentTime=0;
     //show the image
     document.getElementById("body").style="text-align:center;background-color: white;transition-duration:2.0s;";
    document.getElementById("image").style="width:30%;animation: appear 1.5s 1";
