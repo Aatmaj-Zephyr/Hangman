@@ -154,7 +154,14 @@ function SetTurnsLeftStyle() {
 }
 
 function GameOver() {
-
+ win.pause();
+    win.currentTime=0;
+    lost.pause();
+    lost.currentTime=0;
+    correct.pause();
+    correct.currentTime = 0;
+    incorrect.pause();
+    incorrect.currentTime = 0;
     window.setTimeout(function() {
         //Alert that the game is over after a delay
         lost.play()
@@ -164,6 +171,8 @@ function GameOver() {
     if(TryAgain==true){
         score=0;
         start();
+        incorrect.pause();
+    incorrect.currentTime = 0;
     }
     }, 3500);
     document.getElementById("Word").innerHTML = Word;
@@ -173,6 +182,16 @@ function GameOver() {
 }
 
 function GameWon() {
+     win.pause();
+    win.currentTime=0;
+    lost.pause();
+    lost.currentTime=0;
+    correct.pause();
+    correct.currentTime = 0;
+    incorrect.pause();
+    incorrect.currentTime = 0;
+    music.pause();
+    music.currentTime=0;
     win.play();
   document.getElementById("Word").innerHTML = Word;
     document.getElementById("Word").style = "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:160px";
@@ -181,19 +200,22 @@ function GameWon() {
 score=score+TurnsLeft;
         alert("Round passed! Current score is "+score);
         //Alert that the game is over after a delay
+         correct.pause();
+    correct.currentTime = 0;
         start();
     }, 3500);
    imshow();
 }
 function imshow(){
+    music.pause();
+    music.currentTime=0;
     document.getElementById("TurnsLeft").style.display="none";
         for (var counter_gameover = 1; counter_gameover <= 16; counter_gameover++) {
     document.getElementById("button" + counter_gameover).style.display="none";
 
     //Dispay the letters into the indivisual buttons.
 }
-    music.pause();
-    music.currentTime=0;
+    
     //show the image
     document.getElementById("body").style="text-align:center;background-color: white;transition-duration:2.0s;";
    document.getElementById("image").style="width:30%;animation: appear 1.5s 1";
