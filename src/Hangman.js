@@ -162,10 +162,11 @@ function GameOver() {
     correct.currentTime = 0;
     incorrect.pause();
     incorrect.currentTime = 0;
+            lost.play()
+        lost.volume=0.2;
     window.setTimeout(function() {
         //Alert that the game is over after a delay
-        lost.play()
-        lost.volume=0.5;
+
     score=score+TurnsLeft;
     let TryAgain = confirm(" Game Over, you lost. Total score is "+score+" points \n Do you want to try again?");
     if(TryAgain==true){
