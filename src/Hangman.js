@@ -5,6 +5,10 @@ var TurnsleftStyle = "font-size: 65px; font-family: Brush Script MT, cursive;bor
 var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  font-size: 25px;transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
 const SpriteLink="https://img.pokemondb.net/artwork/large/";
 const InfoHyperLink="https://bulbapedia.bulbagarden.net/wiki/";
+var music=new Audio("http://play.pokemonshowdown.com/audio/hgss-kanto-trainer.mp3");
+
+var incorrect=new Audio("http://play.pokemonshowdown.com/audio/cries/litwick.mp3");
+var correct=new Audio("http://play.pokemonshowdown.com/audio/cries/chimecho.mp3");
 var ArrayOfWords = data; //array of data
 //Array containing the words.
 var Word,WordLength,WordLetters,TurnsLeft,Letters,id;
@@ -15,7 +19,9 @@ document.getElementById("play").style="Display:none";
 start();
 }
 function start(){
-     
+     music.play();
+music.loop="loop";
+music.volume = 0.1;
       document.getElementById("body").style="text-align:center;opacity:0.80;transition-duration:1.0s;background-blend-mode: screen;background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');background-color: rgba(255,182,193,0.35);";
   //PascalCase followed.
  id=Math.floor(Math.random() * (ArrayOfWords.length));
@@ -76,6 +82,12 @@ document.getElementById("image").style="display:none;width:5%";
 }
 
 function ButtonClicked(a) {
+    correct.pause();
+    correct.currentTime = 0;
+    incorrect.pause();
+    incorrect.currentTime = 0;
+    //The trailinng muist Stop
+    
     //Function to be executed once button is clicked. 
     //a is the parameter which tells which button is clicked.
     document.getElementById("button" + a).disabled = "disabled";
@@ -96,10 +108,12 @@ function checkscore(a) {
         }
 
         document.getElementById("button" + a).style = "transition-duration: 0.8s;background-color:lime;font-size: 25px;color:Blue;cursor: not-allowed";
+        correct.play();
         //Set the background to green for sucessfull match.
         document.getElementById("Word").innerHTML = WordLetters.join(" ");
     } else {
         document.getElementById("button" + a).style = "transition-duration: 0.8s;background-color:Red;font-size: 25px;animation-name: effect; animation-duration: 0.1s;   animation-iteration-count: 7;color:White;cursor: not-allowed";
+        incorrect.play();
         //Set the background to red for unsucessfull match.
         TurnsLeft = TurnsLeft - 1;
         //reduce the number of tunrns left.
@@ -126,6 +140,8 @@ function SetTurnsLeftStyle() {
         document.getElementById("TurnsLeft").style = TurnsleftStyle + "color:white; border: 4px solid #4CAF50; animation: effect 0.2s infinite; background-color:Red";
     } else {
         document.getElementById("TurnsLeft").style = TurnsleftStyle + "color:voilet;background-color:lime; border: 3px solid #f44336;";
+    
+        
     }
     if(TurnsLeft==0){
           document.getElementById("TurnsLeft").style.display="none";
@@ -170,6 +186,8 @@ function imshow(){
 
     //Dispay the letters into the indivisual buttons.
 }
+    music.pause();
+    music.setTimeout=0;
     //show the image
     document.getElementById("body").style="text-align:center;background-color: white;transition-duration:2.0s;";
    document.getElementById("image").style="width:30%;animation: appear 1.5s 1";
