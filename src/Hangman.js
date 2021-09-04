@@ -30,7 +30,7 @@ for (let i = WordLength - 1; i > 0; i--) {
     //Push blank underscores in the rest of the array according to the length of the word.
 }
 
-document.getElementById("Word").style = "color:blue;background-color:White;transition-duration: 0.8s;font-size:70px";
+document.getElementById("Word").style = "color:blue;background-color:Pink;border-radius: 12px;transition-duration: 0.8s;font-size:70px";
 document.getElementById("Word").innerHTML = WordLetters.join(" ");
 //Display the word in the HTML file
 
