@@ -1,9 +1,10 @@
+
 //Style constants
 var score=0;
 var TurnsleftStyle = "font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
-var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); font-size: 20px;transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
+var style = "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  font-size: 20px;transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
 const SpriteLink="https://img.pokemondb.net/artwork/large/";
-const InfoHyperLink="https://bulbapedia.bulbagarden.net/wiki/"
+const InfoHyperLink="https://bulbapedia.bulbagarden.net/wiki/";
 var ArrayOfWords = data; //array of data
 //Array containing the words.
 var Word,WordLength,WordLetters,TurnsLeft,Letters,id;
@@ -11,7 +12,7 @@ var Word,WordLength,WordLetters,TurnsLeft,Letters,id;
 start();
 function start(){
      
-      document.getElementById("body").style="text-align:center;transition-duration:1.0s;background-color: rgba(255,182,193,0.5);";
+      document.getElementById("body").style="text-align:center;opacity:0.85;transition-duration:1.0s;background-blend-mode: screen;background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');background-color: rgba(255,182,193,0.25);";
   //PascalCase followed.
  id=Math.floor(Math.random() * (ArrayOfWords.length));
  Word = ArrayOfWords[id];
@@ -29,7 +30,7 @@ for (let i = WordLength - 1; i > 0; i--) {
     //Push blank underscores in the rest of the array according to the length of the word.
 }
 
-document.getElementById("Word").style = "color:blue;transition-duration: 0.8s;";
+document.getElementById("Word").style = "color:blue;transition-duration: 0.8s;font-size:70px";
 document.getElementById("Word").innerHTML = WordLetters.join(" ");
 //Display the word in the HTML file
 
@@ -148,7 +149,7 @@ function GameOver() {
 function GameWon() {
     
   document.getElementById("Word").innerHTML = Word;
-    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:150px";
+    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:160px";
     //Show word first, then message with delay
     window.setTimeout(function() {
 score=score+TurnsLeft;
