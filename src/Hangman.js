@@ -8,11 +8,15 @@ const InfoHyperLink="https://bulbapedia.bulbagarden.net/wiki/";
 var ArrayOfWords = data; //array of data
 //Array containing the words.
 var Word,WordLength,WordLetters,TurnsLeft,Letters,id;
+function play(){
+document.getElementById("welcome").style="Display:none";
+document.getElementById("play").style="Display:none";
 
 start();
+}
 function start(){
      
-      document.getElementById("body").style="text-align:center;opacity:0.85;transition-duration:1.0s;background-blend-mode: screen;background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');background-color: rgba(255,182,193,0.25);";
+      document.getElementById("body").style="text-align:center;opacity:0.80;transition-duration:2.0s;background-blend-mode: screen;background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');background-color: rgba(255,182,193,0.35);";
   //PascalCase followed.
  id=Math.floor(Math.random() * (ArrayOfWords.length));
  Word = ArrayOfWords[id];
