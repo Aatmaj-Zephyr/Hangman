@@ -1,122 +1,101 @@
 <html>
-<title>
-Pokemon hangman
-</title>
+   <title>
+      Pokemon hangman
+   </title>
    <head>
       <style>
-      /* Tooltip container */
-.tooltip {
-  position: relative;
-  display: inline-block;
-
-}
-@keyframes effect {
-        0% {
-            transform: translateX(0px) rotate(0deg);
-        }
-  
-        20% {
-            transform: translateX(-4px) rotate(-2deg);
-        }
-  
-        40% {
-            transform: translateX(-2px) rotate(-1deg);
-        }
-  
-        60% {
-            transform: translateX(4px) rotate(2deg);
-        }
-  
-        80% {
-            transform: translateX(2px) rotate(1deg);
-        }
-  
-        100% {
-            transform: translateX(0px) rotate(0deg);
-        }
-    }
-    @keyframes appear {
-        0% {
-            opacity: 0%
-        }
-  
-        20% {
-            opacity: 20%
-        }
-  
-        40% {
-             opacity: 40%
-        }
-  
-        60% {
-             opacity: 60%
-        }
-  
-        80% {
-             opacity: 80%
-        }
-  
-        100% {
-             opacity: 100%
-        }
-    }
-    
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: aqua;
-  color: red;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 0;
-  transition: opacity 3s;
- 
-}
+         /* Tooltip container */
+         .tooltip {
+         position: relative;
+         display: inline-block;
+         }
+         @keyframes effect {
+         0% {
+         transform: translateX(0px) rotate(0deg);
+         }
+         20% {
+         transform: translateX(-4px) rotate(-2deg);
+         }
+         40% {
+         transform: translateX(-2px) rotate(-1deg);
+         }
+         60% {
+         transform: translateX(4px) rotate(2deg);
+         }
+         80% {
+         transform: translateX(2px) rotate(1deg);
+         }
+         100% {
+         transform: translateX(0px) rotate(0deg);
+         }
+         }
+         @keyframes appear {
+         0% {
+         opacity: 0%
+         }
+         20% {
+         opacity: 20%
+         }
+         40% {
+         opacity: 40%
+         }
+         60% {
+         opacity: 60%
+         }
+         80% {
+         opacity: 80%
+         }
+         100% {
+         opacity: 100%
+         }
+         }
+         /* Tooltip text */
+         .tooltip .tooltiptext {
+         visibility: hidden;
+         width: 120px;
+         background-color: aqua;
+         color: red;
+         text-align: center;
+         padding: 5px 0;
+         border-radius: 6px;
+         /* Position the tooltip text - see examples below! */
+         position: absolute;
+         z-index: 1;
+         }
+         /* Show the tooltip text when you mouse over the tooltip container */
+         .tooltip:hover .tooltiptext {
+         visibility: visible;
+         opacity: 0;
+         transition: opacity 3s;
+         }
          .h1{
          font-family: "Brush Script MT", cursive;
          color: red;
          }
          .button:hover{ background-color: yellow;
          color: black;
-         
          }
-        
          .keys {
          display: grid;
          grid-template-columns: repeat(4, 1fr);
          grid-gap: 20px;
          padding: 20px;
          }
-         
-@keyframes coloranimation {
-  0%   {color: red;}
-  25%  {color: yellow;}
-  50%  {color: blue;}
-  100% {color: green;}
-}
-@keyframes coloranimation2 {
-  50%   {color: red;}
-  100%  {color: blue;}
-
-}
+         @keyframes coloranimation {
+         0%   {color: red;}
+         25%  {color: yellow;}
+         50%  {color: blue;}
+         100% {color: green;}
+         }
+         @keyframes coloranimation2 {
+         50%   {color: red;}
+         100%  {color: blue;}
+         }
       </style>
    </head>
-   
    <body id="body" style="text-align:center;transition-duration:4s;background:rgba(255,255,255, 0.8);background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/UER3IW.png');background-blend-mode: screen;">
-     <p align="center" id="welcome" style="font-size:100px;animation-name:coloranimation; animation-duration: 4s;animation-iteration-count: infinite;transition-duration:4s;" class="h1">Welcome to Pokemon Hangman! </p>
+      <p align="center" id="welcome" style="font-size:100px;animation-name:coloranimation; animation-duration: 4s;animation-iteration-count: infinite;transition-duration:4s;" class="h1">Welcome to Pokemon Hangman! </p>
       <button id="play" style="animation-name:coloranimation2;background-color:lime;cursor: pointer;transition-duration:4s; animation-duration: 0.5s;font-size:100px;animation-iteration-count: infinite;"  onClick="play()"> Play </button>
-      
       <p  align="center" ><label style="display:none" color="blue" id="Word" ></label></p>
       <div class="keys">
          <button id="button1"  style="display:none" class="button" onClick="ButtonClicked(1) "> ? </button>
@@ -136,18 +115,14 @@ Pokemon hangman
          <button id="button15" style="display:none" class="button" onClick="ButtonClicked(15)"> ? </button>
          <button id="button16" style="display:none" class="button" onClick="ButtonClicked(16)"> ? </button>
       </div>
-
-     
-<div class="tooltip">
+      <div class="tooltip">
          <button style="display:none" class="tooltip" id="TurnsLeft" > </button>
-              <span   class="tooltiptext">Turns left</span>
-              </div>
-<a target="_blank"  id="hyperlink" >
-<img id="image" style="transition-duration: 3.0s;display:none;width5%">
-</a>
+         <span   class="tooltiptext">Turns left</span>
+      </div>
+      <a target="_blank"  id="hyperlink" >
+      <img id="image" style="transition-duration: 3.0s;display:none;width5%">
+      </a>
       <script type="text/javascript" src=names.js></script>
       <script type="text/javascript" src=Hangman.js></script>
-      
-      
    </body>
 </html>
