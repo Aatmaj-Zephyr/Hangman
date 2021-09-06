@@ -1,4 +1,4 @@
-'[
+var dauta=[
 	"Bulbasaur",
 	"Ivysaur",
 	"Venusaur",
@@ -897,4 +897,4 @@
 	"Glastrier",
 	"Spectrier",
 	"Calyrex"
-]'
+];
