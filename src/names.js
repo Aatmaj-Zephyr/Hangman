@@ -1,4 +1,4 @@
-var dauta=[
+var data=[
 	"Bulbasaur",
 	"Ivysaur",
 	"Venusaur",
