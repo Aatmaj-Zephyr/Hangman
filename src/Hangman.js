@@ -165,20 +165,19 @@ function GameOver() {
     incorrect.currentTime = 0;
     lost.play()
     lost.volume = 0.2;
+    document.getElementById("Word").innerHTML = Word;
+    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px;";
+
     window.setTimeout(function() {
         //Alert that the game is over after a delay
 
-        score = score + TurnsLeft;
-        let TryAgain = confirm(" Game Over, you lost. Total score is " + score + " points \n Do you want to try again?");
-        if (TryAgain == true) {
-            score = 0;
-            start();
-            incorrect.pause();
-            incorrect.currentTime = 0;
-        }
+
+        document.getElementById("welcome").innerHTML = ("Game over! Total score is " + score);
+        score = 0;
+        document.getElementById("welcome").style = "color:Tomato;font-size:30px";
+        document.getElementById("play").innerHTML = "Retry";
+        document.getElementById("play").style = "color:red;font-size:25px;background-color:aqua";
     }, 3500);
-    document.getElementById("Word").innerHTML = Word;
-    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px;";
     //Show message first, then letter
     imshow();
 }
@@ -200,11 +199,15 @@ function GameWon() {
     //Show word first, then message with delay
     window.setTimeout(function() {
         score = score + TurnsLeft;
-        alert("Round passed! Current score is " + score);
         //Alert that the game is over after a delay
+        document.getElementById("welcome").innerHTML = ("Round passed! Current score is " + score);
+        document.getElementById("welcome").style = "color:lime;font-size:30px"
+        document.getElementById("play").innerHTML = "Next Round";
+        document.getElementById("play").style = "color:lime;font-size:25px;background-color:yellow"
         correct.pause();
         correct.currentTime = 0;
-        start();
+        //pause trailing sounds
+
     }, 3500);
     imshow();
 }
