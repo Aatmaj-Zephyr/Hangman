@@ -5,6 +5,7 @@ This is the pokemon version of the hangman game, with names of pokemon as words.
 
 Gotta catch 'em all!
 ![image](https://user-images.githubusercontent.com/83284294/132115615-9c5ff689-1aab-440a-a636-a6d5595008b7.png)
+![image](https://user-images.githubusercontent.com/83284294/132462000-52b72f6f-9a60-48ec-9010-a056517b19ea.png)
 
 ____
 You can run the game on [here](https://raw.githack.com/Aatmaj-Zephyr/Hangman/main/src/Hangman.html)
