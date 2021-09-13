@@ -15,5 +15,6 @@ Data credits- Pokemon JSON data from [this](https://github.com/sindresorhus/poke
 
 Image credits- Pokemon database
 
+Sound credits- Pokemon Showdown.
 
 I don't own any image assets. They are property of nintendo and game freak.
