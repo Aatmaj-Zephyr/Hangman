@@ -230,6 +230,6 @@ function imshow() {
 
 }
 
-window.onbeforeunload = function(){
-   window.alert("Exit?");
-}
+window.addEventListener('beforeunload', function(event) {
+  //do something here
+}, false);
