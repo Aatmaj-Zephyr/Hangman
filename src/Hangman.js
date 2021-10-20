@@ -229,3 +229,7 @@ function imshow() {
 
 
 }
+
+window.onbeforeunload = function(){
+   window.alert("Exit?");
+}
