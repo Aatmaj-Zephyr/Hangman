@@ -231,5 +231,5 @@ function imshow() {
 }
 
 window.addEventListener('beforeunload', function(event) {
-  //do something here
+  window.alert("Exit?");
 }, false);
