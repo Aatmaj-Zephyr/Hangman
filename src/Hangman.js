@@ -42,7 +42,7 @@ function start() {
         //Push blank underscores in the rest of the array according to the length of the word.
     }
 
-    document.getElementById("Word").style = "color:blue;background-color:Pink;border-radius: 12px;transition-duration: 0.8s;font-size:70px";
+    document.getElementById("Word").style = "color:blue;background-color:Pink;border-radius: 12px;transition-duration: 0.8s;font-size:70px;";
     document.getElementById("Word").innerHTML = WordLetters.join(" ");
     //Display the word in the HTML file
 
@@ -166,7 +166,8 @@ function GameOver() {
     lost.play()
     lost.volume = 0.2;
     document.getElementById("Word").innerHTML = Word;
-    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px;";
+    // document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px;";
+    document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:120px;"
 
     window.setTimeout(function() {
         //Alert that the game is over after a delay
@@ -223,11 +224,8 @@ function imshow() {
     }
 
     //show the image
-    document.getElementById("body").style = "text-align:center;background-color: white;transition-duration:2.0s;";
-    document.getElementById("image").style = "width:30%;animation: appear 1.5s 1";
-
-
-
+    document.getElementById("body").style = "text-align:center; background-color: white; transition-duration:2.0s;";
+    document.getElementById("image").style = "width:15%; animation: appear 1.5s 1";
 }
 
 window.addEventListener('beforeunload', function(event) {

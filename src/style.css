@@ -1,9 +1,37 @@
  
 /* Tooltip container */
- .tooltip {
+ div.tooltip-div {
      position: relative;
      display: inline-block;
 }
+ 
+ body{
+    transition-duration:4s;
+    background:rgba(255,255,255, 0.8);
+    background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/UER3IW.png');
+    background-blend-mode: screen;
+ }
+
+ p#welcome{
+    font-size:100px;
+    animation-name:coloranimation; 
+    animation-duration: 4s;
+    animation-iteration-count: 
+    infinite;transition-duration:4s;
+ }
+
+ button#play{
+    animation-name:coloranimation2;
+    background-color:#16f016;
+    border: solid 2px grey;
+    cursor: pointer;
+    transition-duration:4s; 
+    animation-duration: 0.5s;
+    font-size:70px;
+    animation-iteration-count: infinite;
+    margin-top: 2%;
+ }
+
  @keyframes effect {
      0% {
          transform: translateX(0px) rotate(0deg);
@@ -45,7 +73,7 @@
     }
 }
 /* Tooltip text */
- .tooltip .tooltiptext {
+ div.tooltip-div .tooltiptext {
      visibility: hidden;
      width: 120px;
      background-color: aqua;
@@ -58,7 +86,7 @@
      z-index: 1;
 }
 /* Show the tooltip text when you mouse over the tooltip container */
- .tooltip:hover .tooltiptext {
+ div.tooltip-div:hover .tooltiptext {
      visibility: visible;
      opacity: 0;
      transition: opacity 3s;
@@ -67,7 +95,12 @@
      font-family: "Brush Script MT", cursive;
      color: red;
 }
- .button:hover{
+
+ .keys .btn{
+     background-color: #ffffff;
+     border: 2px solid #3d3d3d;
+ }
+ .keys .btn:hover{
      background-color: yellow;
      color: black;
 }
@@ -75,7 +108,7 @@
      display: grid;
      grid-template-columns: repeat(4, 1fr);
      grid-gap: 20px;
-     padding: 20px;
+     padding: 15px;
 }
  @keyframes coloranimation {
      0% {
