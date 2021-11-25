@@ -1,0 +1,52 @@
+<html>
+   <title>
+      Pokemon Hangman
+   </title>
+   <head>
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+      <!-- CSS -->
+      <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+
+   <body class="text-center" id="body">
+      <p class="h1 text-center" id="welcome">Welcome to Pokemon Hangman! </p>
+      <button class="btn" id="play"  onClick="play()"> Play </button>
+      <p class="text-center"><label style="display: none;" color="blue" id="Word" ></label></p>
+      <div class="keys">
+         <button id="button1" style="display:none" class="btn" onClick="ButtonClicked(1) "> ? </button>
+         <button id="button2" style="display:none" class="btn" onClick="ButtonClicked(2) "> ? </button>
+         <button id="button3" style="display:none" class="btn" onClick="ButtonClicked(3) "> ? </button>
+         <button id="button4" style="display:none" class="btn" onClick="ButtonClicked(4) "> ? </button>
+         <button id="button5" style="display:none" class="btn" onClick="ButtonClicked(5) "> ? </button>
+         <button id="button6" style="display:none" class="btn" onClick="ButtonClicked(6) "> ? </button>
+         <button id="button7" style="display:none" class="btn" onClick="ButtonClicked(7) "> ? </button>
+         <button id="button8" style="display:none" class="btn" onClick="ButtonClicked(8) "> ? </button>
+         <button id="button9" style="display:none" class="btn" onClick="ButtonClicked(9) "> ? </button>
+         <button id="button10" style="display:none" class="btn" onClick="ButtonClicked(10)"> ? </button>
+         <button id="button11" style="display:none" class="btn" onClick="ButtonClicked(11)"> ? </button>
+         <button id="button12" style="display:none" class="btn" onClick="ButtonClicked(12)"> ? </button>
+         <button id="button13" style="display:none" class="btn" onClick="ButtonClicked(13)"> ? </button>
+         <button id="button14" style="display:none" class="btn" onClick="ButtonClicked(14)"> ? </button>
+         <button id="button15" style="display:none" class="btn" onClick="ButtonClicked(15)"> ? </button>
+         <button id="button16" style="display:none" class="btn" onClick="ButtonClicked(16)"> ? </button>
+      </div>
+
+      <div class="tooltip-div">
+         <button class="btn" style="display:none" class="tooltip-btn" id="TurnsLeft" > </button>
+         <span class="tooltiptext">Turns left</span>
+      </div>
+      <a target="_blank"  id="hyperlink" >
+         <img id="image" style="transition-duration: 3.0s;display:none;width:5%">
+      </a>
+      <script type="text/javascript" src=names.js></script>
+      <script type="text/javascript" src=Hangman.js></script>
+      
+      <div class="footer">
+         <marquee width="60%" direction="left" height="100px">
+            <p>All assets, names, characters are trademarks of the Pokemon Company. I do not own any of them.</p>
+         </marquee>
+      </div>
+      
+   </body>
+</html>
