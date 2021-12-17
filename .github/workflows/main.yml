@@ -1,0 +1,55 @@
+name: Code Style
+
+on: 
+ push:
+ workflow_dispatch:
+
+jobs:
+  php-cs-fixer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run PHP CS Fixer
+        uses: docker://oskarstark/php-cs-fixer-ga
+        with:
+          args: --config=.php_cs.dist --allow-risky=yes
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v2.3.0
+        with:
+          commit_message: Fix styling
+          branch: ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Autocommit
+        if: steps.format.outputs.status == 'changed'
+        run: |
+         git config --global user.name 'Aatmaj-Zephyr'
+         git config --global user.email 'Aatmaj-Zephyr@users.noreply.github.com'
+         git commit -am "Autoformat"
+         git push 
+
+  prettier:
+    runs-on: ubuntu-latest
+    
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install NPM dependencies
+        run: npm ci
+
+      - name: Run Prettier
+        run: npm run format
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v2.3.0
+        with:
+          commit_message: Apply Prettier changes
+          branch: ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
