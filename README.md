@@ -20,9 +20,8 @@ Sound credits- Pokemon Showdown.
 
 I don't own any image assets. They are property of nintendo and game freak.
 
-
-_____
-
+---
 
 ## How to contribute?
+
 Fix any issues for hacktoberfest participation.
