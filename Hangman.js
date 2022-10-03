@@ -187,6 +187,19 @@ function GameOver() {
   document.getElementById("Word").style =
     "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:120px;";
 
+// Pokemon name speech synthesis
+  if('speechSynthesis' in window){
+	console.log("Web Speech API supported!")
+} else {
+	console.log("Web Speech API not supported :-(")   
+}
+const synth = window.speechSynthesis
+let ourText = "This Pokemon is named"
+const utterThis = new SpeechSynthesisUtterance(ourText + Word)
+
+synth.speak(utterThis)
+// End of speech synth 
+
   window.setTimeout(function () {
     //Alert that the game is over after a delay
 
@@ -217,6 +230,20 @@ function GameWon() {
   document.getElementById("Word").innerHTML = Word;
   document.getElementById("Word").style =
     "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:160px";
+
+  // Pokemon name speech synthesis
+  if('speechSynthesis' in window){
+	console.log("Web Speech API supported!")
+  } else {
+  	console.log("Web Speech API not supported :-(")   
+  }
+  const synth = window.speechSynthesis
+  let ourText = "This Pokemon is named"
+  const utterThis = new SpeechSynthesisUtterance(ourText + Word)
+
+synth.speak(utterThis)
+// End of speech synth 
+  
   //Show word first, then message with delay
   window.setTimeout(function () {
     score = score + TurnsLeft;
