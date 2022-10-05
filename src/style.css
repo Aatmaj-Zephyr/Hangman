@@ -110,6 +110,11 @@
      grid-gap: 20px;
      padding: 15px;
 }
+.tooltip-btn {
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 0;
+}
  @keyframes coloranimation {
      0% {
         color: red;

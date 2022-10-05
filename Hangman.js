@@ -31,11 +31,11 @@ function play() {
 }
 
 function start() {
-  music.play();
+  // music.play();
   music.loop = "loop";
   music.volume = 0.1;
   document.getElementById("body").style =
-    "text-align:center;opacity:0.80;transition-duration:1.0s;background-blend-mode: screen;background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');background-color: rgba(255,182,193,0.35);";
+    "text-align:center;opacity:0.95;transition-duration:1.0s;background-blend-mode: screen;background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');background-color: rgba(255,182,193,0.35);";
   //PascalCase followed.
   id = Math.floor(Math.random() * ArrayOfWords.length);
   Word = ArrayOfWords[id];
@@ -54,7 +54,7 @@ function start() {
   }
 
   document.getElementById("Word").style =
-    "color:blue;background-color:Pink;border-radius: 12px;transition-duration: 0.8s;font-size:70px;";
+    "color:blue;background-color:Pink;border-radius: 12px;transition-duration: 0.8s;font-size:70px;padding:10px;";
   document.getElementById("Word").innerHTML = WordLetters.join(" ");
   //Display the word in the HTML file
 
@@ -127,13 +127,13 @@ function checkscore(a) {
     }
 
     document.getElementById("button" + a).style =
-      "transition-duration: 0.8s;background-color:lime;font-size: 25px;color:Blue;cursor: not-allowed";
+      "transition-duration: 0.8s;background-color:lime;font-size: 25px;color:white;cursor: not-allowed;opacity:0.95";
     correct.play();
     //Set the background to green for sucessfull match.
     document.getElementById("Word").innerHTML = WordLetters.join(" ");
   } else {
     document.getElementById("button" + a).style =
-      "transition-duration: 0.8s;background-color:Red;font-size: 25px;animation-name: effect; animation-duration: 0.1s;   animation-iteration-count: 7;color:White;cursor: not-allowed";
+      "transition-duration: 0.8s;background-color:Red;font-size: 25px;animation-name: effect; animation-duration: 0.1s;   animation-iteration-count: 7;color:White;cursor: not-allowed;opacity:0.8;";
     incorrect.play();
     //Set the background to red for unsucessfull match.
     TurnsLeft = TurnsLeft - 1;
