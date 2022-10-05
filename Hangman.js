@@ -31,7 +31,7 @@ function play() {
 }
 
 function start() {
-  // music.play();
+  music.play();
   music.loop = "loop";
   music.volume = 0.1;
   document.getElementById("body").style =
