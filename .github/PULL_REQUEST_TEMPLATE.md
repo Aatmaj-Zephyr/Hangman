@@ -23,11 +23,6 @@ Happy contributing!
 put [x] for checking the checkboxes
 -->
 
-### Have you read the [Contributing Guidelines on issues](https://github.com/appwrite/appwrite/blob/master/CONTRIBUTING.md)?
-
-- [ ] yes
-- [ ] no
-
 ### Have you updated the README.md file?
 
 - [ ] yes
@@ -37,3 +32,14 @@ put [x] for checking the checkboxes
 
 - [ ] yes
 - [ ] no
+
+### Is the code beautified?
+
+- [ ] yes
+- [ ] no
+
+### Is the code clear to understand woth proper variable naming and comments?
+
+- [ ] yes
+- [ ] no
+ 
