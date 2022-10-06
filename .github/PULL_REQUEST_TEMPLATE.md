@@ -19,9 +19,6 @@ Happy contributing!
 
 (If this PR is related to any other PR or resolves any issue or related to any issue link all related PR and issues here.)
 
-
-
-
 <!--
 put [x] for checking the checkboxes
 -->
@@ -30,14 +27,13 @@ put [x] for checking the checkboxes
 
 - [ ] yes
 - [ ] no
- 
+
 ### Have you updated the README.md file?
- 
+
 - [ ] yes
 - [ ] no
- 
+
 ### Have you made any big breakthrough change?
- 
+
 - [ ] yes
 - [ ] no
- 
