@@ -11,8 +11,6 @@ Gotta catch 'em all!
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/83284294/194230957-a1903352-5eff-4072-9dde-3e757d23ff41.png">
 <img width="1052" alt="image" src="https://user-images.githubusercontent.com/83284294/194231070-3466d1b4-92eb-4a8e-80bd-44a9950bd981.png">
 
-
-
 ---
 
 # You can run the game on [here](https://aatmaj-zephyr.github.io/Hangman/)
