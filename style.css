@@ -20,18 +20,25 @@
     font-size:100px;
     animation-name:coloranimation; 
     animation-duration: 4s;
-    animation-iteration-count: 
-    infinite;transition-duration:4s;
+    animation-iteration-count: infinite;
+    transition-duration:4s;
  }
 
  button#play{
     animation-name:coloranimation2;
-    background-color:#16f016;
-    border: solid 2px grey;
+    background-image: url(./pokeball-button.png);
+    background-color: transparent !important;
+    Filter: drop-shadow(2px 4px 8px #585858);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    border: none !important;
     cursor: pointer;
     transition-duration:4s; 
     animation-duration: 0.5s;
-    font-size:70px;
+    font-size:48px;
     animation-iteration-count: infinite;
     margin-top: 2%;
  }
