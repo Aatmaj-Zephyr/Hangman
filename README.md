@@ -4,12 +4,12 @@ This is the pokemon version of the hangman game, with names of pokemon as words.
 
 Gotta catch 'em all!
 
-<img width="1503" alt="image" src="https://user-images.githubusercontent.com/83284294/194230811-a339fcf9-27af-41c2-b132-7479c18979c7.png">
-
+![play](https://user-images.githubusercontent.com/44277065/194386077-b0a5e21e-9583-4b5b-a682-47024c3c6ed7.png)
 ![image](https://user-images.githubusercontent.com/83284294/132115615-9c5ff689-1aab-440a-a636-a6d5595008b7.png)
 <img width="1506" alt="image" src="https://user-images.githubusercontent.com/83284294/194230890-705e52e8-91fc-4970-8856-dd19dd0b0d01.png">
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/83284294/194230957-a1903352-5eff-4072-9dde-3e757d23ff41.png">
-<img width="1052" alt="image" src="https://user-images.githubusercontent.com/83284294/194231070-3466d1b4-92eb-4a8e-80bd-44a9950bd981.png">
+![next-round](https://user-images.githubusercontent.com/44277065/194386400-c572daa9-dd21-4686-bc95-f2de24b090a8.png)
+
 
 ---
 
