@@ -10,6 +10,10 @@
     background:rgba(255,255,255, 0.8);
     background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/UER3IW.png');
     background-blend-mode: screen;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
  }
 
  p#welcome{
