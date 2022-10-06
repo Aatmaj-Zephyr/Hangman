@@ -42,4 +42,3 @@ put [x] for checking the checkboxes
 
 - [ ] yes
 - [ ] no
- 
