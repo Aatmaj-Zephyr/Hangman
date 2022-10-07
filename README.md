@@ -10,7 +10,6 @@ Gotta catch 'em all!
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/83284294/194230957-a1903352-5eff-4072-9dde-3e757d23ff41.png">
 ![next-round](https://user-images.githubusercontent.com/44277065/194386400-c572daa9-dd21-4686-bc95-f2de24b090a8.png)
 
-
 ---
 
 # You can run the game on [here](https://aatmaj-zephyr.github.io/Hangman/)
