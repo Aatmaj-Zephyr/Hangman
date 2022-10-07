@@ -160,3 +160,7 @@
    color: Red;
    text-align: center;
 }
+
+#scrollText {
+    font-weight: bold;
+}
