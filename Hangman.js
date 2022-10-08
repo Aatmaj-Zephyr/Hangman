@@ -35,7 +35,7 @@ function start() {
   music.loop = "loop";
   music.volume = 0.1;
   document.getElementById("body").style =
-    "text-align:center;opacity:0.95;transition-duration:1.0s;background-blend-mode: screen;background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');background-color: rgba(255,255,255,0.8);";
+    "text-align:center;opacity:0.95;transition-duration:1.0s;background-blend-mode: screen;background-image: url('./images/gameplay-wallpaper.jpg');background-color: rgba(255,255,255,0.8);";
   //PascalCase followed.
   id = Math.floor(Math.random() * ArrayOfWords.length);
   Word = ArrayOfWords[id];
