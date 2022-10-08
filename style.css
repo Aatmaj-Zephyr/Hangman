@@ -1,11 +1,10 @@
- 
 /* Tooltip container */
- div.tooltip-div {
-     position: relative;
-     display: inline-block;
+div.tooltip-div {
+    position: relative;
+    display: inline-block;
 }
  
- body{
+body {
     transition-duration:4s;
     background:rgba(255,255,255, 0.8);
     background-image: url('./images/home-wallpaper.png');
@@ -14,17 +13,17 @@
     background-repeat: no-repeat;
     height: 100vh;
     background-position: center;
- }
+}
 
- p#welcome{
+p#welcome {
     font-size:100px;
     animation-name:coloranimation; 
     animation-duration: 4s;
     animation-iteration-count: infinite;
     transition-duration:4s;
- }
+}
 
- button#play{
+button#play {
     animation-name:coloranimation2;
     background-image: url('./images/poke-btn.png');
     background-color: transparent !important;
@@ -42,9 +41,9 @@
     animation-iteration-count: infinite;
     margin-top: 2%;
     padding-top: 60px;
- }
+}
 
- @keyframes effect {
+@keyframes effect {
      0% {
          transform: translateX(0px) rotate(0deg);
     }
@@ -64,7 +63,8 @@
          transform: translateX(0px) rotate(0deg);
     }
 }
- @keyframes appear {
+
+@keyframes appear {
      0% {
          opacity: 0% 
     }
@@ -84,44 +84,49 @@
          opacity: 100% 
     }
 }
+
 /* Tooltip text */
- div.tooltip-div .tooltiptext {
-     visibility: hidden;
-     width: 120px;
-     background-color: aqua;
-     color: red;
-     text-align: center;
-     padding: 5px 0;
-     border-radius: 6px;
+div.tooltip-div .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: aqua;
+    color: red;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
     /* Position the tooltip text - see examples below! */
-     position: absolute;
-     z-index: 1;
-}
-/* Show the tooltip text when you mouse over the tooltip container */
- div.tooltip-div:hover .tooltiptext {
-     visibility: visible;
-     opacity: 0;
-     transition: opacity 3s;
-}
- .h1{
-     font-family: "Brush Script MT", cursive;
-     color: red;
+    position: absolute;
+    z-index: 1;
 }
 
- .keys .btn{
-     background-color: #ffffff;
-     border: 2px solid #3d3d3d;
-     font-weight: 500;
- }
- .keys .btn:hover{
-     background-color: yellow;
-     color: black;
+/* Show the tooltip text when you mouse over the tooltip container */
+div.tooltip-div:hover .tooltiptext {
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 3s;
 }
- .keys {
-     display: grid;
-     grid-template-columns: repeat(4, 1fr);
-     grid-gap: 20px;
-     padding: 15px;
+
+.h1 {
+    font-family: "Brush Script MT", cursive;
+    color: red;
+}
+
+.keys .btn {
+    background-color: #ffffff;
+    border: 2px solid #3d3d3d;
+    font-weight: 500;
+}
+
+.keys .btn:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 15px;
 }
 
 .tooltip-btn {
@@ -129,7 +134,8 @@
     height: 1.2em;
     line-height: 0;
 }
- @keyframes coloranimation {
+
+@keyframes coloranimation {
      0% {
         color: red;
     }
@@ -143,7 +149,8 @@
         color: green;
     }
 }
- @keyframes coloranimation2 {
+
+@keyframes coloranimation2 {
      50% {
         color: red;
     }

@@ -232,8 +232,7 @@ function GameWon() {
   music.currentTime = 0;
   win.play();
   word.innerHTML = Word;
-  word.style =
-    "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:160px";
+  word.style = "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:160px";
 
   // Pokemon name speech synthesis
   if ("speechSynthesis" in window) {
@@ -252,12 +251,10 @@ function GameWon() {
   window.setTimeout(function () {
     score = score + TurnsLeft;
     //Alert that the game is over after a delay
-    WelcomeText.innerHTML =
-      "Round passed! Current score is " + score;
-      WelcomeText.style = "color:lime;font-size:30px";
-      PlayBtn.innerHTML = "Next Round";
-      PlayBtn.style =
-      "color:lime;font-size:25px;background-color:yellow";
+    WelcomeText.innerHTML = "Round passed! Current score is " + score;
+    WelcomeText.style = "color:lime;font-size:30px";
+    PlayBtn.innerHTML = "Next Round";
+    PlayBtn.style = "color:lime;font-size:25px;background-color:yellow";
     correct.pause();
     correct.currentTime = 0;
     //pause trailing sounds
