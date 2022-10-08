@@ -6,19 +6,14 @@ var style =
   "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  font-size: 25px;transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
 const SpriteLink = "https://img.pokemondb.net/artwork/large/";
 const InfoHyperLink = "https://bulbapedia.bulbagarden.net/wiki/";
-var music = new Audio(
-  "http://play.pokemonshowdown.com/audio/hgss-kanto-trainer.mp3"
-);
-var lost = new Audio(
-  "http://commondatastorage.googleapis.com/codeskulptor-assets/Evillaugh.ogg"
-);
-var win = new Audio("http://play.pokemonshowdown.com/audio/cries/pikachu.mp3");
-var incorrect = new Audio(
-  "http://play.pokemonshowdown.com/audio/cries/litwick.mp3"
-);
-var correct = new Audio(
-  "http://play.pokemonshowdown.com/audio/cries/chimecho.mp3"
-);
+
+// Audio constants
+const music = new Audio("./audio/hgss-kanto-trainer.mp3");
+const lost = new Audio("./audio/evil-laugh.ogg");
+const win = new Audio("./audio/cries-pikachu.mp3");
+const incorrect = new Audio("./audio/cries-litwick.mp3");
+const correct = new Audio("./audio/cries-chimecho.mp3");
+
 var ArrayOfWords = data; //array of data
 //Array containing the words.
 var Word, WordLength, WordLetters, TurnsLeft, Letters, id;
