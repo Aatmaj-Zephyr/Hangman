@@ -35,3 +35,10 @@ Fix any issues for hacktoberfest participation.
 3. Fix any the issue.
 4. Create a pull request.
 5. Add screenshots of the webapp to highlight the changes made.
+
+
+### Thanks to all Contributors
+<a href="https://github.com/Aatmaj-Zephyr/Hangman/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Aatmaj-Zephyr/Hangman" />
+</a>
+
