@@ -37,7 +37,7 @@
     border: none !important;
     cursor: pointer;
     transition-duration:4s; 
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     font-size:48px;
     animation-iteration-count: infinite;
     margin-top: 2%;
