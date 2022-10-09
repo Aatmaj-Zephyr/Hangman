@@ -44,6 +44,13 @@
     padding-top: 60px;
     position: relative;
  }
+
+button#play:hover{
+height: 250px;
+width: 250px;
+transition: 1.5s;
+}
+
  @keyframes slideMe  {
     0%{
         transform : translateY(-150px);
