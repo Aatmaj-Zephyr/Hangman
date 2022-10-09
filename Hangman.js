@@ -204,11 +204,11 @@ function GameOver() {
     WelcomeText.innerHTML =
       "Game over! Total score is " + score;
     score = 0;
-    WelcomeText.style = "color:Tomato;font-size:30px";
+    WelcomeText.style = "color:Tomato;font-size:30px;animation: slideMe .70s ease-in;";
     PlayBtn.innerHTML = "Retry";
     PlayBtn.style =
-      "color:red;font-size:25px;background-color:aqua";
-  }, 3500);
+      "color:red;font-size:25px;background-color:aqua; animation: slideMe .70s ease-in;";
+  }, 7000);
   //Show message first, then letter
   imshow();
 }
