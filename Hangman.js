@@ -250,7 +250,8 @@ function GameWon() {
     //Alert that the game is over after a delay
     document.getElementById("welcome").innerHTML =
       "Round passed! Current score is " + score;
-    document.getElementById("welcome").style = "color:lime;font-size:30px ;animation: slideMe .70s ease-in;";
+    document.getElementById("welcome").style =
+      "color:lime;font-size:30px ;animation: slideMe .70s ease-in;";
     document.getElementById("play").innerHTML = "Next Round";
     document.getElementById("play").style =
       "color:lime;font-size:25px;background-color:yellow;  animation: slideMe .70s ease-in;";
