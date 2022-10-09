@@ -172,6 +172,9 @@ function SetTurnsLeftStyle() {
 }
 
 function GameOver() {
+  document.getElementById("image").src =
+    SpriteLink + Word.toLowerCase() + ".jpg"; //to load image beforehand;
+  document.getElementById("hyperlink").href = InfoHyperLink + Word; //Camelcase word and not lowercade
   win.pause();
   win.currentTime = 0;
   lost.pause();
@@ -217,6 +220,9 @@ function GameOver() {
 }
 
 function GameWon() {
+  document.getElementById("image").src =
+    SpriteLink + Word.toLowerCase() + ".jpg"; //to load image beforehand;
+  document.getElementById("hyperlink").href = InfoHyperLink + Word; //Camelcase word and not lowercade
   win.pause();
   win.currentTime = 0;
   lost.pause();
