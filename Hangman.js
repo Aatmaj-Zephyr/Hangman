@@ -24,7 +24,6 @@ const PlayBtn = document.getElementById("play");
 const TurnsLeftCounter = document.getElementById("turns-left-counter");
 const PokemonImg = document.getElementById("pokemon-image");
 
-
 function play() {
   WelcomeText.style = "Display:none";
   PlayBtn.style = "Display:none";
@@ -93,8 +92,7 @@ function start() {
     //Dispay the letters into the individual buttons.
   }
   PokemonImg.style = "display:none;width:5%";
-  PokemonImg.src =
-    SpriteLink + Word.toLowerCase() + ".jpg"; //to load image beforehand;
+  PokemonImg.src = SpriteLink + Word.toLowerCase() + ".jpg"; //to load image beforehand;
   document.getElementById("hyperlink").href = InfoHyperLink + Word; //Camelcase word and not lowercade
 }
 
@@ -201,10 +199,10 @@ function GameOver() {
   window.setTimeout(function () {
     //Alert that the game is over after a delay
 
-    WelcomeText.innerHTML =
-      "Game over! Total score is " + score;
+    WelcomeText.innerHTML = "Game over! Total score is " + score;
     score = 0;
-    WelcomeText.style = "color:Tomato;font-size:30px;animation: slideMe .70s ease-in;";
+    WelcomeText.style =
+      "color:Tomato;font-size:30px;animation: slideMe .70s ease-in;";
     PlayBtn.innerHTML = "Retry";
     PlayBtn.style =
       "color:red;font-size:25px;background-color:aqua; animation: slideMe .70s ease-in;";
@@ -270,8 +268,7 @@ function imshow() {
   //show the image
   body.style =
     "text-align:center; background-color: white; transition-duration:2.0s;";
-    PokemonImg.style =
-    "width:15%; animation: appear 1.5s 1";
+  PokemonImg.style = "width:15%; animation: appear 1.5s 1";
 }
 
 window.addEventListener(
