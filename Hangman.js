@@ -1,7 +1,5 @@
 //Style constants
 var score = 0;
-var TurnsleftStyle =
-  "font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
 var style =
   "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  font-size: 25px;transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
 const SpriteLink = "https://img.pokemondb.net/artwork/large/";
@@ -23,8 +21,8 @@ var Word, WordLength, WordLetters, TurnsLeft, Letters, id;
 const WelcomeText = document.getElementById("welcome");
 const word = document.getElementById("word");
 const PlayBtn = document.getElementById("play");
-const TurnsLeftCounter = document.getElementById("TurnsLeftCounter");
-const PokemonImg = document.getElementById("PokemonImage");
+const TurnsLeftCounter = document.getElementById("turns-left-counter");
+const PokemonImg = document.getElementById("pokemon-image");
 
 
 function play() {
@@ -57,9 +55,9 @@ function start() {
     //Push blank underscores in the rest of the array according to the length of the word.
   }
 
-  word.style =
-    "color:blue;background-color:Pink;border-radius: 12px;transition-duration: 0.8s;font-size:70px;padding:10px;";
-    word.innerHTML = WordLetters.join(" ");
+  word.classList.add("word-start");
+  word.classList.remove("word-won", "word-game-over");
+  word.innerHTML = WordLetters.join(" ");
   //Display the word in the HTML file
 
   TurnsLeft = Math.floor(WordLength * 0.8);
@@ -158,17 +156,14 @@ function checkscore(a) {
 function SetTurnsLeftStyle() {
   //Set the colour of the turns left according to the theme
   if (TurnsLeft <= 4 && TurnsLeft > 2) {
-    TurnsLeftCounter.style =
-      TurnsleftStyle +
-      "color:green; border: 4px solid #008CBA; background-color:Yellow";
+    TurnsLeftCounter.classList.add("yellow-counter");
+    TurnsLeftCounter.classList.remove("green-counter", "red-counter");
   } else if (TurnsLeft <= 2) {
-    TurnsLeftCounter.style =
-      TurnsleftStyle +
-      "color:white; border: 4px solid #4CAF50; animation: effect 0.2s infinite; background-color:Red";
+    TurnsLeftCounter.classList.add("red-counter");
+    TurnsLeftCounter.classList.remove("green-counter", "yellow-counter");
   } else {
-    TurnsLeftCounter.style =
-      TurnsleftStyle +
-      "color:voilet;background-color:lime; border: 3px solid #f44336;";
+    TurnsLeftCounter.classList.add("green-counter");
+    TurnsLeftCounter.classList.remove("red-counter", "yellow-counter");
   }
   if (TurnsLeft == 0) {
     TurnsLeftCounter.style.display = "none";
@@ -187,9 +182,8 @@ function GameOver() {
   lost.play();
   lost.volume = 0.2;
   word.innerHTML = Word;
-  // word.style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px;";
-  word.style =
-    "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:120px;";
+  word.classList.add("word-game-over");
+  word.classList.remove("word-won", "word-start");
 
   // Pokemon name speech synthesis
   if ("speechSynthesis" in window) {
@@ -232,7 +226,8 @@ function GameWon() {
   music.currentTime = 0;
   win.play();
   word.innerHTML = Word;
-  word.style = "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:160px";
+  word.classList.add("word-won");
+  word.classList.remove("word-start", "word-game-over");
 
   // Pokemon name speech synthesis
   if ("speechSynthesis" in window) {

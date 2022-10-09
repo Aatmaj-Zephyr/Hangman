@@ -12,7 +12,7 @@
    <body class="text-center" id="body">
       <p class="h1 text-center" id="welcome">Welcome to Pokemon Hangman! </p>
       <button class="btn" id="play"  onClick="play()"> Play </button>
-      <p class="text-center"><label style="display: none;" color="blue" id="word" ></label></p>
+      <p class="text-center"><label color="blue" id="word" ></label></p>
       <div class="keys">
          <button id="button1" style="display:none" class="btn" onClick="ButtonClicked(1) "> ? </button>
          <button id="button2" style="display:none" class="btn" onClick="ButtonClicked(2) "> ? </button>
@@ -33,11 +33,11 @@
       </div>
 
       <div class="tooltip-div">
-         <button class="btn tooltip-btn" style="display:none" id="TurnsLeftCounter" > </button>
+         <button class="btn tooltip-btn" id="turns-left-counter" > </button>
          <span class="tooltiptext">Turns left</span>
       </div>
       <a target="_blank"  id="hyperlink" >
-         <img id="PokemonImage" style="transition-duration: 3.0s;display:none;width:5%">
+         <img id="pokemon-image" style="display:none">
       </a>
       <script type="text/javascript" src=names.js></script>
       <script type="text/javascript" src=Hangman.js></script>
