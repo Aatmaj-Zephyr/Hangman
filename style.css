@@ -42,6 +42,28 @@
     animation-iteration-count: infinite;
     margin-top: 2%;
     padding-top: 60px;
+    position: relative;
+ }
+ @keyframes slideMe  {
+    0%{
+        transform : translateY(-150px);
+        opacity:0;
+    }
+    60%{
+        transform :translateY(30px);
+    }
+    62%{
+        opacity:1;
+    }
+    80%{
+        transform :translate(0);
+    }
+    90%{
+        transform:skew(-5deg);
+    }
+    100%{
+        transform : skew(0deg);
+    }
  }
 
  @keyframes effect {
