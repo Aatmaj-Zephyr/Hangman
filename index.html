@@ -12,16 +12,24 @@
 </head>
 
 <body class="text-center" id="body">
-   <!-- Loader -->
+<main>
+<!-- Loader -->
    <div class="loader-wrapper">
       <span class="loader-container">
          <span class="loader"></span>
       </span>
    </div>
 
-   <p class="h1 text-center" id="welcome">Welcome to Pokemon Hangman! </p>
-   <button class="btn" id="play" onClick="play()"> Play </button>
-   <p class="text-center"><label style="display: none;" color="blue" id="Word"></label></p>
+      <div class="fg-elements">
+
+         <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="pokemon_logo">
+
+         <button class="btn" id="play"  onClick="play()">LET'S PLAY </button>
+
+         <p class="h1 text-center" id="welcome"> Pokemon Hangman! </p>
+         <p class="catch-phrase"> Gotta Name 'Em All</p>
+         <p class="text-center"><label style="display: none;" color="blue" id="Word" ></label></p>
+
    <div class="keys">
       <button id="button1" style="display:none" class="btn" onClick="ButtonClicked(1) "> ? </button>
       <button id="button2" style="display:none" class="btn" onClick="ButtonClicked(2) "> ? </button>
@@ -41,6 +49,8 @@
       <button id="button16" style="display:none" class="btn" onClick="ButtonClicked(16)"> ? </button>
    </div>
 
+      </div>
+         <div class="fg-pic">
    <div class="tooltip-div">
       <button class="btn tooltip-btn" style="display:none" id="TurnsLeft"> </button>
       <span class="tooltiptext">Turns left</span>
@@ -48,14 +58,18 @@
    <a target="_blank" id="hyperlink">
       <img id="image" style="transition-duration: 3.0s;display:none;width:5%">
    </a>
-   <script type="text/javascript" src=names.js></script>
-   <script type="text/javascript" src=Hangman.js></script>
+            <p class="disclaimer">All assets, names, characters are trademarks of the Pokemon Company. I do not own any of them.</p>
+            <img id="pica-pic" src="./Assets/pikachu.png" alt="">
+         </div>
 
-   <div class="footer">
-      <marquee id="scrollText" width="60%" direction="left" height="100px">
-         <p>All assets, names, characters are trademarks of the Pokemon Company. I do not own any of them.</p>
-      </marquee>
-   </div>
+
+
+
+
+</main>
+
+<script type="text/javascript" src=names.js></script>
+<script type="text/javascript" src=Hangman.js></script>
    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
    <script>
