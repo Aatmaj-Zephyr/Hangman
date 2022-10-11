@@ -37,7 +37,7 @@ function start() {
 
 
   window.addEventListener("beforeunload", function (event) {
-    event.returnValue = "changes you may made may not be saved"; // to prevent accidental closing of the tab
+    event.returnValue = "changes you made may not be saved"; // to prevent accidental closing of the tab
   });
 
 
