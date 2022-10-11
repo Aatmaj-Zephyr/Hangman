@@ -1,9 +1,9 @@
 //Style constants
 var score = 0;
 var TurnsleftStyle =
-  "font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
+  "cursor: url('./pokeball-hover.png'), pointer;font-size: 65px; font-family: Brush Script MT, cursive;border-radius: 50%; transition-duration: 0.5s;";
 var style =
-  "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  font-size: 25px;transition-duration: 0.8s;cursor: pointer;border-radius: 8px;";
+  "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  font-size: 25px;transition-duration: 0.8s;cursor: url('./pokeball-hover.png'), pointer;border-radius: 8px;";
 const SpriteLink = "https://img.pokemondb.net/artwork/large/";
 const InfoHyperLink = "https://bulbapedia.bulbagarden.net/wiki/";
 var music = new Audio(
@@ -54,7 +54,7 @@ function start() {
   }
 
   document.getElementById("Word").style =
-    "color:blue;background-color:Pink;border-radius: 12px;transition-duration: 0.8s;font-size:70px;padding:10px;";
+    "cursor: url('./pokeball.png'), pointer;color:blue;background-color:Pink;border-radius: 12px;transition-duration: 0.8s;font-size:70px;padding:10px;";
   document.getElementById("Word").innerHTML = WordLetters.join(" ");
   //Display the word in the HTML file
 
@@ -188,7 +188,7 @@ function GameOver() {
   document.getElementById("Word").innerHTML = Word;
   // document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px;";
   document.getElementById("Word").style =
-    "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:120px;";
+    "cursor: url('./pokeball.png'), pointer;text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:120px;";
 
   // Pokemon name speech synthesis
   if ("speechSynthesis" in window) {
@@ -283,7 +283,7 @@ function imshow() {
   document.getElementById("body").style =
     "text-align:center; background-color: white; transition-duration:2.0s;";
   document.getElementById("image").style =
-    "width:15%; animation: appear 1.5s 1";
+    "cursor:url('./pokeball-hover.png'), pointer;width:15%; animation: appear 1.5s 1";
 }
 
 window.addEventListener(
