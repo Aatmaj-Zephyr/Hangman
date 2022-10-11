@@ -14,7 +14,8 @@
     background-repeat: no-repeat;
     height: 100vh;
     background-position: center;
- }
+    cursor: url('./pokeball.png'), pointer;
+}
 
  p#welcome{
     font-size:100px;
@@ -35,7 +36,7 @@
     height: 200px;
     width: 200px;
     border: none !important;
-    cursor: pointer;
+    cursor: url('./pokeball-hover.png'), pointer;
     transition-duration:4s; 
     animation-duration: 1s;
     font-size:48px;
