@@ -30,7 +30,17 @@ function play() {
   start();
 }
 
+
+
 function start() {
+
+
+
+  window.addEventListener("beforeunload", function (event) {
+    event.returnValue = "changes you may made may not be saved"; // to prevent accidental closing of the tab
+  });
+
+
   music.play();
   music.loop = "loop";
   music.volume = 0.1;
