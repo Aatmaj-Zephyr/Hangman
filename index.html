@@ -10,6 +10,13 @@
    </head>
 
    <body class="text-center" id="body">
+      <!-- Loader -->
+      <div class="loader-wrapper">
+         <span class="loader-container">
+            <span class="loader"></span>
+         </span>
+      </div>
+
       <p class="h1 text-center" id="welcome">Welcome to Pokemon Hangman! </p>
       <button class="btn" id="play"  onClick="play()"> Play </button>
       <p class="text-center"><label style="display: none;" color="blue" id="Word" ></label></p>
@@ -47,6 +54,11 @@
             <p>All assets, names, characters are trademarks of the Pokemon Company. I do not own any of them.</p>
          </marquee>
       </div>
-      
+      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+      <script>
+         $(window).on("load", function(){
+            $(".loader-wrapper").fadeOut("slow");
+         });
+      </script>
    </body>
 </html>
