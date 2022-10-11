@@ -83,6 +83,7 @@
  }
 
  button#play {
+     width:  0.92%;    transition:  1s; 
      animation-name: coloranimation2;
      background-image: url(./poke-btn.png);
      background-color: transparent !important;
@@ -94,7 +95,6 @@
      width: 200px;
      border: none !important;
      cursor: url('./pokeball-hover.png'), pointer;
-     transition-duration: 4s;
      animation-duration: 1s;
      font-size: 48px;
      animation-iteration-count: infinite;
