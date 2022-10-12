@@ -24,14 +24,14 @@ var ArrayOfWords = data; //array of data
 var Word, WordLength, WordLetters, TurnsLeft, Letters, id;
 
 function play() {
-  document.getElementById("welcome").style.cssText = `Display:none;`
-  document.getElementById("play").style.cssText = `Display:none;`
-document.getElementById('pica-pic').style.cssText = `Display:none;`
-document.querySelector('.catch-phrase').style=`Display:none`;
-document.getElementById('logo').style.cssText = `Display:none`;
-document.querySelector('main').style = `Display:flex; 
+  document.getElementById("welcome").style.cssText = `Display:none;`;
+  document.getElementById("play").style.cssText = `Display:none;`;
+  document.getElementById("pica-pic").style.cssText = `Display:none;`;
+  document.querySelector(".catch-phrase").style = `Display:none`;
+  document.getElementById("logo").style.cssText = `Display:none`;
+  document.querySelector("main").style = `Display:flex; 
   flex-direction:column;
-`
+`;
 
   start();
 }
@@ -74,7 +74,7 @@ function start() {
   //Setting the Letters
 
   for (var k of Word) {
-    if (!Letters.includes(k) && (k !== Word.charAt(0))) {
+    if (!Letters.includes(k) && k !== Word.charAt(0)) {
       Letters.push(k.toString());
       //Push the letters of word into the "Letters" array without repetition
     }
