@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+*{
+    font-family: 'Lilita One', cursive;
+    margin: 0;
+    padding: 0;
+
+}
  /* Tooltip container */
  div.tooltip-div {
      position: relative;
@@ -5,14 +13,11 @@
  }
 
  body {
-     transition-duration: 4s;
-     background: rgba(255, 255, 255, 0.8);
-     background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/UER3IW.png');
+     transition-duration:2s;
      background-blend-mode: screen;
      background-size: cover;
-     background-repeat: no-repeat;
      height: 100vh;
-     background-position: center;
+     background: #1d3036 no-repeat center;
      cursor: url('./pokeball.png'), pointer;
  }
 
@@ -74,40 +79,14 @@
      }
  }
 
- p#welcome {
-     font-size: 100px;
-     animation-name: coloranimation;
-     animation-duration: 4s;
-     animation-iteration-count: infinite;
-     transition-duration: 4s;
- }
+#welcome {
+    font-size:5.2rem;
+    font-family: Reglisse, serif;
+    color: #e7dcd2;
+    margin: 0 0 5rem;
+}
 
- button#play {
-     width:  0.92%;    transition:  1s; 
-     animation-name: coloranimation2;
-     background-image: url(./poke-btn.png);
-     background-color: transparent !important;
-     Filter: drop-shadow(2px 4px 8px #585858);
-     background-size: contain;
-     background-repeat: no-repeat;
-     background-position: center;
-     height: 200px;
-     width: 200px;
-     border: none !important;
-     cursor: url('./pokeball-hover.png'), pointer;
-     animation-duration: 1s;
-     font-size: 48px;
-     animation-iteration-count: infinite;
-     margin-top: 2%;
-     padding-top: 60px;
-     position: relative;
- }
 
- button#play:hover {
-     height: 250px;
-     width: 250px;
-     transition: 1.5s;
- }
 
  @keyframes slideMe {
      0% {
@@ -210,7 +189,6 @@
  }
 
  .h1 {
-     font-family: "Brush Script MT", cursive;
      color: red;
  }
 
@@ -228,8 +206,7 @@
  .keys {
      display: grid;
      grid-template-columns: repeat(4, 1fr);
-     grid-gap: 20px;
-     padding: 15px;
+     padding: 0.7rem;
  }
 
  .tooltip-btn {
@@ -238,33 +215,7 @@
      line-height: 0;
  }
 
- @keyframes coloranimation {
-     0% {
-         color: red;
-     }
 
-     25% {
-         color: yellow;
-     }
-
-     50% {
-         color: blue;
-     }
-
-     100% {
-         color: green;
-     }
- }
-
- @keyframes coloranimation2 {
-     50% {
-         color: red;
-     }
-
-     100% {
-         color: blue;
-     }
- }
 
  .footer {
      position: fixed;
@@ -275,6 +226,93 @@
      text-align: center;
  }
 
- #scrollText {
-     font-weight: bold;
- }
+/*new intro page */
+
+@font-face {
+    font-family: "Reglisse";
+    src: url("./Assets/Fonts/Reglisse-0WOD9.otf");
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+}
+
+.disclaimer{
+    width:15rem;
+    position: absolute;
+    top:0;
+    right:0;
+    text-align: start;
+    color: rgb(248, 114, 68);
+}
+
+.fg-pic{
+    width: 100%;
+}
+
+#pica-pic{
+    width: 100%;
+    height: 100vh;
+
+}
+
+.fg-elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    background:rgb(251, 181, 90);
+    width: 10rem;
+    border-radius:20px;
+    height: 2.7rem;
+}
+
+P{
+    color: black;
+}
+
+.catch-phrase{
+    color: rgb(253, 191, 26);
+    font-size:1.5rem;
+    border-bottom: 2px solid #e7dcd2;
+
+}
+
+#logo{
+    margin: 0 0 6rem;
+}
+
+#play{
+    margin: 0 0 2rem;
+}
+
+.letters-btn{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.btn{
+    width: 12rem;
+    margin: 2rem;
+}
+
+.btn:hover{
+    background: #ffaa37;
+}
+
+@media screen and (max-width: 1000px) {
+    .disclaimer{
+        display: none;
+    }
+    .btn{
+        width: 7rem;
+    }
+
+}
