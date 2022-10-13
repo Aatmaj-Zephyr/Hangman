@@ -196,6 +196,9 @@
      background-color: #ffffff;
      border: 2px solid #3d3d3d;
      font-weight: 500;
+     display: flex;
+     justify-content: center;
+     align-items: center;
  }
 
  .keys .btn:hover {
