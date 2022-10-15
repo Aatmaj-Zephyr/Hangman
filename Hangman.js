@@ -97,9 +97,7 @@ function start() {
     //Dispay the letters into the individual buttons.
   }
   document.getElementById("image").style = "display:none;width:5%";
-  document.getElementById("image").src =
-    SpriteLink + Word.toLowerCase() + ".jpg"; //to load image beforehand;
-  document.getElementById("hyperlink").href = InfoHyperLink + Word; //Camelcase word and not lowercade
+ 
 }
 
 function ButtonClicked(a) {
@@ -226,6 +224,7 @@ function GameOver() {
 }
 
 function GameWon() {
+  
   document.getElementById("image").src =
     SpriteLink + Word.toLowerCase() + ".jpg"; //to load image beforehand;
   document.getElementById("hyperlink").href = InfoHyperLink + Word; //Camelcase word and not lowercade
