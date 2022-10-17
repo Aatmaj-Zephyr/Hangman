@@ -5,7 +5,9 @@
 
 name: Test the website
 on:
-   [push]
+   push:
+    branches:
+      - main
 jobs:
   create_issue:
     name: Create team sync issue
