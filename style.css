@@ -244,6 +244,7 @@ main{
 
 .disclaimer{
     width:15rem;
+    font-size: 10px;
     position: absolute;
     top:0;
     right:0;
