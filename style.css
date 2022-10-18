@@ -294,7 +294,7 @@ P{
 
 
  button#play{
-    width:  0.92%;    transition:  1s;
+    transition:  1s;
     animation-name:coloranimation2;
     background-image: url(./poke-btn.png);
     background-color: transparent !important;
