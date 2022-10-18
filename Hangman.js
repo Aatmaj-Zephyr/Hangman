@@ -181,7 +181,7 @@ function SetTurnsLeftStyle() {
       TurnsleftStyle +
       "color:voilet;background-color:lime; border: 3px solid #f44336;";
   }
-  if (TurnsLeft == 0) {
+  if (TurnsLeft === 0) {
     document.getElementById("TurnsLeft").style.display = "none";
   }
 }
@@ -250,8 +250,11 @@ function GameWon() {
   music.currentTime = 0;
   win.play();
   document.getElementById("Word").innerHTML = Word;
-  document.getElementById("Word").style =
-    "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:160px";
+  document.getElementById("Word").style = `
+  text-shadow: 2px 2px black;
+  color:lime;
+  transition-duration: 1.0s;
+  font-size:6rem`;
 
   // Pokemon name speech synthesis
   if ("speechSynthesis" in window) {
