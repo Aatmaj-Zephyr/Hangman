@@ -81,9 +81,14 @@
 
 #welcome {
     font-size:5.2rem;
+    font-family: 'Lilita One', serif;
+    color: #e7dcd2;
+}
+
+#welcome_text{
+    font-size:5.2rem;
     font-family: Reglisse, serif;
     color: #e7dcd2;
-    margin: 0 0 5rem;
 }
 
 
@@ -286,9 +291,7 @@ P{
 
 }
 
-#logo{
-    margin: 0 0 6rem;
-}
+
 
  button#play{
     width:  0.92%;    transition:  1s;

@@ -29,9 +29,10 @@ function play() {
   document.getElementById("pica-pic").style.cssText = `Display:none;`;
   document.querySelector(".catch-phrase").style = `Display:none`;
   document.getElementById("logo").style.cssText = `Display:none`;
-  document.querySelector("main").style = `Display:flex; 
-  flex-direction:column;
-`;
+  document.querySelector("main").style = `
+  Display:flex; 
+  flex-direction:column;`
+  document.getElementById('welcome_text').style.cssText = `Display:none`
 
   start();
 }
@@ -59,8 +60,14 @@ function start() {
     //Push blank underscores in the rest of the array according to the length of the word.
   }
 
-  document.getElementById("Word").style =
-    "cursor: url('./pokeball.png'), pointer;color:blue;background-color:Pink;border-radius: 12px;transition-duration: 0.8s;font-size:70px;padding:10px;";
+  document.getElementById("Word").style = `
+    cursor: url('./pokeball.png'),pointer;
+    color:blue;
+     background-color:Pink;
+     border-radius: 12px;
+     transition-duration: 0.8s;
+     font-size:70px;padding:10px;`;
+
   document.getElementById("Word").innerHTML = WordLetters.join(" ");
   //Display the word in the HTML file
 
@@ -122,15 +129,20 @@ function checkscore(a) {
   if (Word.includes(Letters[a])) {
     //If the letter matches......
     for (let i = Word.length; i >= 0; i--) {
-      if (Word.charAt(i) == Letters[a]) {
+      if (Word.charAt(i) === Letters[a]) {
         WordLetters[i] = Letters[a];
         //Put the letter in the WordLetters array at all positions.
         //This means even repeated letters are put in all the positions.
       }
     }
 
-    document.getElementById("button" + a).style =
-      "transition-duration: 0.8s;background-color:lime;font-size: 25px;color:white;cursor: not-allowed;opacity:0.95";
+    document.getElementById("button" + a).style = `
+    transition-duration: 0.8s;
+    background-color:lime;
+    font-size: 25px;
+    color:white;
+    cursor: not-allowed;
+    opacity:0.95`;
     correct.play();
     //Set the background to green for sucessfull match.
     document.getElementById("Word").innerHTML = WordLetters.join(" ");
@@ -145,10 +157,10 @@ function checkscore(a) {
   document.getElementById("TurnsLeft").innerHTML = TurnsLeft;
 
   SetTurnsLeftStyle(); //this must be before game over or game won.
-  if (WordLetters.join("") == Word) {
+  if (WordLetters.join("") === Word) {
     GameWon(); //Game won if all letters correctly guessed.
   }
-  if (TurnsLeft == 0) {
+  if (TurnsLeft === 0) {
     //Game lost if turns over.
     GameOver(); //game over.
   }
