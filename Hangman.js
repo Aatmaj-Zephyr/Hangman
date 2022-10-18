@@ -1,7 +1,7 @@
 //Style constants
 var score = 0;
 var TurnsleftStyle =
-  "cursor: url('./pokeball-hover.png'), pointer;font-size: 55px; border-radius: 7%; font-family: Brush Script MT, cursive; transition-duration: 0.5s;";
+  "cursor: url('./pokeball-hover.png'), pointer;font-size: 55px; border-radius: 7%; font-family: Lilita One, cursive; transition-duration: 0.5s;";
 var style =
   "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  font-size: 25px;transition-duration: 0.8s;cursor: url('./pokeball-hover.png'), pointer;border-radius: 8px;";
 const SpriteLink = "https://img.pokemondb.net/artwork/large/";
@@ -41,8 +41,14 @@ function start() {
   music.play();
   music.loop = "loop";
   music.volume = 0.1;
-  document.getElementById("body").style =
-    "text-align:center;opacity:0.95;transition-duration:1.0s;background-blend-mode: screen;background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');background-color: rgba(255,255,255,0.8);";
+  document.getElementById("body").style = `
+    text-align:center;
+    opacity:0.95;
+    transition-duration:1.0s;
+    background-blend-mode: screen;
+    background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');
+    background-color: rgba(255,255,255,0.8);`
+  ;
   //PascalCase followed.
   id = Math.floor(Math.random() * ArrayOfWords.length);
   Word = ArrayOfWords[id];
@@ -147,8 +153,16 @@ function checkscore(a) {
     //Set the background to green for sucessfull match.
     document.getElementById("Word").innerHTML = WordLetters.join(" ");
   } else {
-    document.getElementById("button" + a).style =
-      "transition-duration: 0.8s;background-color:Red;font-size: 25px;animation-name: effect; animation-duration: 0.1s;   animation-iteration-count: 7;color:White;cursor: not-allowed;opacity:0.8;";
+    document.getElementById("button" + a).style = `
+      transition-duration: 0.8s;
+      background-color:Red;
+      font-size: 25px;
+      animation-name: effect;
+      animation-duration: 0.1s;
+      animation-iteration-count: 7;
+      color:White;
+      cursor: not-allowed;
+      opacity:0.8;`;
     incorrect.play();
     //Set the background to red for unsucessfull match.
     TurnsLeft = TurnsLeft - 1;
