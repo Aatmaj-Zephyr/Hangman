@@ -213,7 +213,7 @@ function GameOver() {
       "Game over! Total score is " + score;
     score = 0;
     document.getElementById("welcome").style =
-      "color:Tomato;font-size:30px;animation: slideMe .70s ease-in;";
+      "color:red;font-size:40px;letter-spacing:3px;animation: slideMe .70s ease-in;";
     document.getElementById("play").innerHTML = "Retry";
     document.getElementById("play").style =
       "color:red;font-size:25px;background-color:aqua; animation: slideMe .70s ease-in;";
@@ -261,7 +261,7 @@ function GameWon() {
     document.getElementById("welcome").innerHTML =
       "Round passed! Current score is " + score;
     document.getElementById("welcome").style =
-      "color:lime;font-size:30px ;animation: slideMe .70s ease-in;";
+      "color:lime;font-size:40px ;letter-spacing:3px;animation: slideMe .70s ease-in;";
     document.getElementById("play").innerHTML = "Next Round";
     document.getElementById("play").style =
       "color:lime;font-size:25px;background-color:yellow;  animation: slideMe .70s ease-in;";
