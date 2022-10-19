@@ -1,7 +1,7 @@
 //Style constants
 var score = 0;
 var TurnsleftStyle =
-  "cursor: url('./pokeball-hover.png'), pointer;font-size: 55px; border-radius: 7%; font-family: Brush Script MT, cursive; transition-duration: 0.5s;";
+  "cursor: url('./pokeball-hover.png'), pointer;font-size: 55px; border-radius: 7%; font-family: Lilita One, cursive; transition-duration: 0.5s;";
 var style =
   "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  font-size: 25px;transition-duration: 0.8s;cursor: url('./pokeball-hover.png'), pointer;border-radius: 8px;";
 const SpriteLink = "https://img.pokemondb.net/artwork/large/";
@@ -29,9 +29,10 @@ function play() {
   document.getElementById("pica-pic").style.cssText = `Display:none;`;
   document.querySelector(".catch-phrase").style = `Display:none`;
   document.getElementById("logo").style.cssText = `Display:none`;
-  document.querySelector("main").style = `Display:flex; 
-  flex-direction:column;
-`;
+  document.querySelector("main").style = `
+  Display:flex; 
+  flex-direction:column;`
+  document.getElementById('welcome_text').style.cssText = `Display:none`
 
   start();
 }
@@ -40,8 +41,14 @@ function start() {
   music.play();
   music.loop = "loop";
   music.volume = 0.1;
-  document.getElementById("body").style =
-    "text-align:center;opacity:0.95;transition-duration:1.0s;background-blend-mode: screen;background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');background-color: rgba(255,255,255,0.8);";
+  document.getElementById("body").style = `
+    text-align:center;
+    opacity:0.95;
+    transition-duration:1.0s;
+    background-blend-mode: screen;
+    background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');
+    background-color: rgba(255,255,255,0.8);`
+  ;
   //PascalCase followed.
   id = Math.floor(Math.random() * ArrayOfWords.length);
   Word = ArrayOfWords[id];
@@ -59,8 +66,14 @@ function start() {
     //Push blank underscores in the rest of the array according to the length of the word.
   }
 
-  document.getElementById("Word").style =
-    "cursor: url('./pokeball.png'), pointer;color:blue;background-color:Pink;border-radius: 12px;transition-duration: 0.8s;font-size:70px;padding:10px;";
+  document.getElementById("Word").style = `
+    cursor: url('./pokeball.png'),pointer;
+    color:blue;
+     background-color:Pink;
+     border-radius: 12px;
+     transition-duration: 0.8s;
+     font-size:70px;padding:10px;`;
+
   document.getElementById("Word").innerHTML = WordLetters.join(" ");
   //Display the word in the HTML file
 
@@ -122,21 +135,34 @@ function checkscore(a) {
   if (Word.includes(Letters[a])) {
     //If the letter matches......
     for (let i = Word.length; i >= 0; i--) {
-      if (Word.charAt(i) == Letters[a]) {
+      if (Word.charAt(i) === Letters[a]) {
         WordLetters[i] = Letters[a];
         //Put the letter in the WordLetters array at all positions.
         //This means even repeated letters are put in all the positions.
       }
     }
 
-    document.getElementById("button" + a).style =
-      "transition-duration: 0.8s;background-color:lime;font-size: 25px;color:white;cursor: not-allowed;opacity:0.95";
+    document.getElementById("button" + a).style = `
+    transition-duration: 0.8s;
+    background-color:lime;
+    font-size: 25px;
+    color:white;
+    cursor: not-allowed;
+    opacity:0.95`;
     correct.play();
     //Set the background to green for sucessfull match.
     document.getElementById("Word").innerHTML = WordLetters.join(" ");
   } else {
-    document.getElementById("button" + a).style =
-      "transition-duration: 0.8s;background-color:Red;font-size: 25px;animation-name: effect; animation-duration: 0.1s;   animation-iteration-count: 7;color:White;cursor: not-allowed;opacity:0.8;";
+    document.getElementById("button" + a).style = `
+      transition-duration: 0.8s;
+      background-color:Red;
+      font-size: 25px;
+      animation-name: effect;
+      animation-duration: 0.1s;
+      animation-iteration-count: 7;
+      color:White;
+      cursor: not-allowed;
+      opacity:0.8;`;
     incorrect.play();
     //Set the background to red for unsucessfull match.
     TurnsLeft = TurnsLeft - 1;
@@ -145,10 +171,10 @@ function checkscore(a) {
   document.getElementById("TurnsLeft").innerHTML = TurnsLeft;
 
   SetTurnsLeftStyle(); //this must be before game over or game won.
-  if (WordLetters.join("") == Word) {
+  if (WordLetters.join("") === Word) {
     GameWon(); //Game won if all letters correctly guessed.
   }
-  if (TurnsLeft == 0) {
+  if (TurnsLeft === 0) {
     //Game lost if turns over.
     GameOver(); //game over.
   }
@@ -169,7 +195,7 @@ function SetTurnsLeftStyle() {
       TurnsleftStyle +
       "color:voilet;background-color:lime; border: 3px solid #f44336;";
   }
-  if (TurnsLeft == 0) {
+  if (TurnsLeft === 0) {
     document.getElementById("TurnsLeft").style.display = "none";
   }
 }
@@ -238,8 +264,11 @@ function GameWon() {
   music.currentTime = 0;
   win.play();
   document.getElementById("Word").innerHTML = Word;
-  document.getElementById("Word").style =
-    "text-shadow: 2px 2px black;color:lime;transition-duration: 1.0s;font-size:160px";
+  document.getElementById("Word").style = `
+  text-shadow: 2px 2px black;
+  color:lime;
+  transition-duration: 1.0s;
+  font-size:6rem`;
 
   // Pokemon name speech synthesis
   if ("speechSynthesis" in window) {
