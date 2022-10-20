@@ -40,7 +40,7 @@ function start() {
   music.loop = "loop";
   music.volume = 0.1;
   document.getElementById("body").style = null;
-  document.getElementById("body").className = ("gameBodyBackground");
+  document.getElementById("body").className = "gameBodyBackground";
   // document.getElementById("body").style =
   //   "text-align:center;opacity:0.95;transition-duration:1.0s;background-blend-mode: screen;background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');background-color: rgba(255,255,255,0.8);";
   //PascalCase followed.
@@ -59,8 +59,8 @@ function start() {
     WordLetters.push("_");
     //Push blank underscores in the rest of the array according to the length of the word.
   }
-  document.getElementById("Word").style= null;
-  document.getElementById("Word").className = ("wordProgress");
+  document.getElementById("Word").style = null;
+  document.getElementById("Word").className = "wordProgress";
   document.getElementById("Word").innerHTML = WordLetters.join(" ");
   //Display the word in the HTML file
 
@@ -174,7 +174,7 @@ function SetTurnsLeftStyle() {
 }
 
 function GameOver() {
-  resetValuesEndGame()
+  resetValuesEndGame();
   lost.play();
   lost.volume = 0.2;
 
@@ -209,7 +209,7 @@ function GameOver() {
 }
 
 function GameWon() {
-  resetValuesEndGame()
+  resetValuesEndGame();
   music.pause();
   music.currentTime = 0;
   win.play();
@@ -245,9 +245,9 @@ function GameWon() {
   imshow();
 }
 
-function resetValuesEndGame(){
-
-  document.getElementById("image").src = SpriteLink + Word.toLowerCase() + ".jpg"; //to load image beforehand;
+function resetValuesEndGame() {
+  document.getElementById("image").src =
+    SpriteLink + Word.toLowerCase() + ".jpg"; //to load image beforehand;
   document.getElementById("hyperlink").href = InfoHyperLink + Word; //Camelcase word and not lowercade
 
   win.pause();
@@ -261,7 +261,6 @@ function resetValuesEndGame(){
 
   document.getElementById("Word").innerHTML = Word;
   document.getElementById("Word").style = null;
-
 }
 
 function imshow() {
@@ -276,9 +275,9 @@ function imshow() {
 
   //show the image
   document.getElementById("body").style = null;
-  document.getElementById("body").className = ("bodyImshow");
+  document.getElementById("body").className = "bodyImshow";
   document.getElementById("image").style = null;
-  document.getElementById("image").className = ("imageImshow");
+  document.getElementById("image").className = "imageImshow";
 }
 
 window.addEventListener(
