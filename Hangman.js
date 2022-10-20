@@ -47,6 +47,7 @@ function start() {
     transition-duration:1.0s;
     background-blend-mode: screen;
     background-image: url('https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg');
+    background-repeat: repeat;
     background-color: rgba(255,255,255,0.8);`;
   //PascalCase followed.
   id = Math.floor(Math.random() * ArrayOfWords.length);
