@@ -240,6 +240,10 @@
     font-family: "Reglisse";
     src: url("./Assets/Fonts/Reglisse-0WOD9.otf");
 }
+@font-face {
+    font-family: "Reglisse_2";
+    src: url("./Assets/Fonts/ReglisseFill-WyWzn.otf");
+}
 
 main{
     display: grid;
@@ -338,7 +342,7 @@ transition: 1.5s;
     background: #ffaa37;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px ) and (min-width: 501px )  {
     .disclaimer{
         display: none;
     }
@@ -346,4 +350,96 @@ transition: 1.5s;
         width: 7rem;
     }
 
+    .fg-elements{
+        height: 100vh;
+    }
+
+    #pica-pic{
+        position:absolute;
+        z-index: -1;
+        object-fit: cover;
+        visibility: hidden;
+    }
+
+    main{
+        background: #b2afe1 url(./Assets/try_1.png) no-repeat center/cover ;
+        background-blend-mode: multiply;
+
+
+    }
+    #welcome_text{
+        font-family: Reglisse_2,sans-serif;
+        color: #b07cdb;
+        font-size: 7.5rem;
+        margin: 0 2rem;
+    }
+
+    #logo{
+        position: absolute;
+        top: 3%;
+        width: 35rem;
+    }
+
+    .catch-phrase{
+        position: absolute;
+        bottom: 1%;
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 500px )  {
+    .disclaimer{
+        display: none;
+    }
+    .btn{
+        width: 7rem;
+    }
+
+    .fg-elements{
+        height: 100vh;
+    }
+
+    #pica-pic{
+        position:absolute;
+        z-index: -1;
+        object-fit: cover;
+        visibility: hidden;
+    }
+
+    main{
+        background: #b2afe1 url(./Assets/try_1.png) no-repeat center/cover ;
+        background-blend-mode: multiply;
+
+
+    }
+    #welcome_text{
+        font-family: Reglisse_2,sans-serif;
+        color: #b07cdb;
+        font-size: 3.5rem;
+
+    }
+
+    #logo{
+        position: absolute;
+        top: 3%;
+
+    }
+
+    .catch-phrase{
+        position: absolute;
+        bottom: 1%;
+        font-size: 1.5rem;
+    }
+
+    .keys {
+        grid-template-columns:repeat(3,1fr) ;
+    }
+    .btn{
+        width: 5rem;
+        margin: 1rem;
+
+    }
+    #word{
+        font-size: 3rem
+    }
 }
