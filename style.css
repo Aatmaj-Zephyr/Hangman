@@ -214,7 +214,8 @@
  .keys {
      display: grid;
      grid-template-columns: repeat(4, 1fr);
-     padding: 0.7rem;
+     justify-items: center;
+     margin: 0 10%;
  }
 
  .tooltip-btn {
@@ -443,3 +444,4 @@ transition: 1.5s;
         font-size: 3rem
     }
 }
+
