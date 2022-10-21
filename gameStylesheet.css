@@ -1,5 +1,5 @@
 .gameLostPokemonName{
-    cursor: url('./pokeball.png'),
+    cursor: url('./src/files/pokeball.png'),
     pointer;
     text-shadow: 2px 2px black;
     color:red;
@@ -17,7 +17,7 @@
 }
 
 .wordProgress{
-    cursor: url('./pokeball.png'), pointer;
+    cursor: url('./src/files/pokeball.png'), pointer;
     color:blue;
     background-color:Pink;
     border-radius: 12px;
@@ -81,7 +81,7 @@
 }
 
 .imageImshow{
-    cursor:url('./pokeball-hover.png'), pointer;
+    cursor:url('./src/files/pokeball-hover.png'), pointer;
     width:15%;
     animation: appear 1.5s 1;
 

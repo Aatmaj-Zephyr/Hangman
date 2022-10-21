@@ -18,7 +18,7 @@
      background-size: cover;
      height: 100vh;
      background: #1d3036 no-repeat center;
-     cursor: url('./pokeball.png'), pointer;
+     cursor: url('./src/files/pokeball.png'), pointer;
  }
 
  /* laoder styles */
@@ -297,7 +297,7 @@ P{
  button#play{
     transition:  1s;
     animation-name:coloranimation2;
-    background-image: url(./poke-btn.png);
+    background-image: url(./src/files/poke-btn.png);
     background-color: transparent !important;
     Filter: drop-shadow(2px 4px 8px #585858);
     background-size: contain;
