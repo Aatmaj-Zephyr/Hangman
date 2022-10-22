@@ -5,14 +5,15 @@ This is the pokemon version of the hangman game, with names of pokemon as words.
 Gotta catch 'em all!
 
 ### <hr> Desktop Version
+
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/83284294/196313643-f7144a79-7ccb-47cd-ace1-9ac8722f7bbb.png">
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/83284294/196313685-91f20bd7-b331-4f65-8c12-8e85524aad2d.png">
 <img width="1505" alt="image" src="https://user-images.githubusercontent.com/83284294/196313732-bc91b5a0-d88c-4937-94bf-5437ede69403.png">
 <img width="1234" alt="image" src="https://user-images.githubusercontent.com/83284294/196313890-58a65ccd-cb36-4da4-9573-aaf08c788bbd.png">
 
 ### <hr> Mobile version
-<img width="1234" alt="image" src="https://user-images.githubusercontent.com/96977189/197133939-2163a045-37fb-49fe-962b-33e5548a1f7f.png">
 
+<img width="1234" alt="image" src="https://user-images.githubusercontent.com/96977189/197133939-2163a045-37fb-49fe-962b-33e5548a1f7f.png">
 
 ---
 

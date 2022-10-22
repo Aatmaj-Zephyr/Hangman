@@ -34,14 +34,13 @@ function play() {
   Display:flex; 
   flex-direction:column;
   `;
-  if(window.innerWidth < 1000){
-   document.querySelector('main').style.cssText =`
+  if (window.innerWidth < 1000) {
+    document.querySelector("main").style.cssText = `
     background : #7b7b7b url("https://raw.githubusercontent.com/Aatmaj-Zephyr/Hangman/main/WallpaperDog-743770.jpg");
      background-blend-mode: multiply;
-   `
+   `;
   }
   document.getElementById("welcome_text").style.cssText = `Display:none`;
-
 
   start();
 }
@@ -71,7 +70,6 @@ function start() {
     //Push blank underscores in the rest of the array according to the length of the word.
   }
 
-
   document.getElementById("Word").style = `
     cursor: url('./pokeball.png'),pointer;
     color:blue;
@@ -80,14 +78,14 @@ function start() {
      transition-duration: 0.8s;
      font-size:70px;padding:10px;`;
 
-  if(window.innerWidth<1000){
+  if (window.innerWidth < 1000) {
     document.getElementById("Word").style = `
       cursor: url('./pokeball.png'),pointer;
     color:blue;
      background-color:Pink;
      border-radius: 12px;
      transition-duration: 0.8s;
-     font-size:2.7rem;`
+     font-size:2.7rem;`;
   }
 
   document.getElementById("Word").innerHTML = WordLetters.join(" ");
@@ -212,7 +210,6 @@ function GameOver() {
   document.getElementById("Word").style =
     "cursor: url('./pokeball.png'), pointer;text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:5rem;";
 
-
   document.getElementById("Word").className = "gameLostPokemonName";
   // Pokemon name speech synthesis
   if ("speechSynthesis" in window) {
@@ -323,12 +320,12 @@ window.addEventListener(
   false
 );
 
-const bg_pic = document.querySelector('.fg-pic');
-const front_text = document.querySelector('.fg-elements');
-const main = document.querySelector('main')
-if(window.innerWidth<1000){
-    bg_pic.remove();
-    front_text.innerHTML+= `
+const bg_pic = document.querySelector(".fg-pic");
+const front_text = document.querySelector(".fg-elements");
+const main = document.querySelector("main");
+if (window.innerWidth < 1000) {
+  bg_pic.remove();
+  front_text.innerHTML += `
     <div class="tooltip-div">
       <button class="btn tooltip-btn" style="display:none" id="TurnsLeft"> </button>
       <span class="tooltiptext">Turns left</span>
@@ -337,9 +334,8 @@ if(window.innerWidth<1000){
       <img id="image" style="transition-duration: 3.0s;display:none;width:5%">
    </a>
     <img id="pica-pic" src="./Assets/pikachu.png" alt="">
-    `
+    `;
   main.style = `
   grid-template-columns:1fr;
-  `
-
+  `;
 }
