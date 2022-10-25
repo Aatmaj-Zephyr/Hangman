@@ -358,3 +358,16 @@ transition: 1.5s;
         grid-template-rows: 1fr 2fr;
     }
 }
+
+
+#repo-link {
+    color:black;
+    width:15rem;
+    font-size: 12px;
+    position: absolute;
+    top:30px;
+    right:0;
+    text-align: start;
+    text-decoration: none;
+    
+}
