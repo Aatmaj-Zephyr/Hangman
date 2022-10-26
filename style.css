@@ -298,7 +298,7 @@ P{
 
 
 
- button#play{
+ button.retryButton{
     transition:  1s;
     animation-name:coloranimation2;
     background-image: url(./src/files/poke-btn.png);
@@ -318,12 +318,12 @@ P{
     margin-top: 2%;
     padding-top: 60px;
     position: relative;
- }
+}
 
-button#play:hover{
-height: 250px;
-width: 250px;
-transition: 1.5s;
+button.retryButton:hover{
+    height: 250px;
+    width: 250px;
+    transition: 1.5s;
 }
 
 .letters-btn{
