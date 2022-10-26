@@ -262,6 +262,17 @@ main{
     color: rgb(248, 114, 68);
 }
 
+#repo-link{
+    color: black;
+    width: 15rem;
+    font-size: 12px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    text-align: start;
+    text-decoration: none;
+}
+
 .fg-pic{
     width: 100%;
 }
