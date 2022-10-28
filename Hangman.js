@@ -9,9 +9,7 @@ const InfoHyperLink = "https://bulbapedia.bulbagarden.net/wiki/";
 var music = new Audio(
   "http://play.pokemonshowdown.com/audio/hgss-kanto-trainer.mp3"
 );
-var lost = new Audio(
-  "/assets/loose-sound.wav"
-);
+var lost = new Audio("/assets/loose-sound.wav");
 var win = new Audio("http://play.pokemonshowdown.com/audio/cries/pikachu.mp3");
 var incorrect = new Audio(
   "http://play.pokemonshowdown.com/audio/cries/litwick.mp3"
