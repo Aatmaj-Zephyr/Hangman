@@ -26,15 +26,18 @@
 
          <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
             alt="pokemon_logo">
-
-         <button class="btn" id="play" onClick="play()"><span class="top">LET'S </span><span
-               class="bottom">PLAY</span></button>
+         <div class="text-center">
+            <button class="btn" id="play" onClick="play()">
+               <span class="top">LET'S </span>
+               <span class="bottom">PLAY</span>
+            </button>
+         </div>
 
          <p class="h1 text-center" id="welcome_text"> Pokemon Hangman! </p>
-         <p class="h1 text-center" id="welcome"></p>
+         <div class="text-center"><p class="h1" id="welcome"></p></div>
          <p class="catch-phrase"> Gotta Name 'Em All</p>
 
-         <p class="text-center"><label style="display: none;" color="blue" id="Word"></label></p>
+         <div class="text-center"><label style="display: none;" id="Word"></label></div>
 
          <div class="keys">
             <button id="button1" style="display:none" class="btn" onClick="ButtonClicked(1) "> ? </button>
@@ -56,7 +59,7 @@
          </div>
 
       </div>
-      <div class="fg-pic">
+      <div class="fg-pic text-center">
          <div class="tooltip-div">
             <button class="btn tooltip-btn" style="display:none" id="TurnsLeft"> </button>
             <span class="tooltiptext">Turns left</span>

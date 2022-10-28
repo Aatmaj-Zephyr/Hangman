@@ -445,3 +445,9 @@ transition: 1.5s;
     }
 }
 
+.winText{
+    text-shadow: 2px 2px black;
+    color:lime;
+    transition-duration: 1.0s;
+    font-size:100px;
+}
