@@ -10,7 +10,7 @@ var music = new Audio(
   "http://play.pokemonshowdown.com/audio/hgss-kanto-trainer.mp3"
 );
 var lost = new Audio(
-  "http://commondatastorage.googleapis.com/codeskulptor-assets/Evillaugh.ogg"
+  "/assets/loose-sound.wav"
 );
 var win = new Audio("http://play.pokemonshowdown.com/audio/cries/pikachu.mp3");
 var incorrect = new Audio(
@@ -203,7 +203,7 @@ function SetTurnsLeftStyle() {
 function GameOver() {
   resetValuesEndGame();
   lost.play();
-  lost.volume = 0.2;
+  lost.volume = 0.9;
 
   document.getElementById("Word").innerHTML = Word;
   // document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px;";
