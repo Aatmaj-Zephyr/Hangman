@@ -289,6 +289,12 @@ P{
     color: black;
 }
 
+.link-style {
+    color: white;
+    
+}
+
+
 .catch-phrase{
     color: rgb(253, 191, 26);
     font-size:1.5rem;
