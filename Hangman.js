@@ -156,12 +156,14 @@ function checkscore(a) {
     document.getElementById("button" + a).style =
       "transition-duration: 0.8s;background-color:lime;font-size: 25px;color:white;cursor: not-allowed;opacity:0.95";
     correct.play();
+    correct.volume = 0.3;
     //Set the background to green for sucessfull match.
     document.getElementById("Word").innerHTML = WordLetters.join(" ");
   } else {
     document.getElementById("button" + a).style =
       "transition-duration: 0.8s;background-color:Red;font-size: 25px;animation-name: effect; animation-duration: 0.1s;   animation-iteration-count: 7;color:White;cursor: not-allowed;opacity:0.8;";
     incorrect.play();
+    incorrect.volume = 0.3;
     //Set the background to red for unsucessfull match.
     TurnsLeft = TurnsLeft - 1;
     //reduce the number of tunrns left.
@@ -201,7 +203,7 @@ function SetTurnsLeftStyle() {
 function GameOver() {
   resetValuesEndGame();
   lost.play();
-  lost.volume = 0.9;
+  lost.volume = 0.6;
 
   document.getElementById("Word").innerHTML = Word;
   // document.getElementById("Word").style = "text-shadow: 2px 2px black;color:Red;transition-duration: 1.0s;font-size:150px;";
@@ -218,6 +220,7 @@ function GameOver() {
   const synth = window.speechSynthesis;
   let ourText = "This Pokemon is named";
   const utterThis = new SpeechSynthesisUtterance(ourText + Word);
+  utterThis.volume = 0.7;
 
   synth.speak(utterThis);
   // End of speech synth
